@@ -1,0 +1,13 @@
+langchain-deepseek==1.1.1
+langchain==1.4.3
+langgraph==1.2.14
+langgraph-checkpoint-postgres==3.1.2
+psycopg[binary,pool]==3.3.6
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+python-dotenv>=1,<2
+httpx>=0.28,<1
+
+langgraph-checkpoint-sqlite==3.1.1
+aiosqlite==0.22.1
+sqlite-vec==0.1.9

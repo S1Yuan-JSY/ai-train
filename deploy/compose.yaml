@@ -1,0 +1,55 @@
+name: ai-train
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      APP_ENV: production
+      PUBLIC_ORIGIN: https://${DOMAIN:?Fill DOMAIN in deploy/.env}
+      APP_ACCESS_TOKEN: ${APP_ACCESS_TOKEN:-}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:?Fill DEEPSEEK_API_KEY in deploy/.env}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:?Fill a valid model name in deploy/.env}
+      DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      COOKIE_SECURE: "true"
+      ENABLE_LEGACY_TOKEN: "false"
+      MEMORY_DB: /app/backend/data/memory.sqlite3
+      AGENT_MEMORY_DB: /app/backend/data/agent.sqlite3
+      LANGSMITH_TRACING: "false"
+    volumes:
+      - app_data:/app/backend/data
+    # No host port: only Caddy is published. Do not publish 8787 with proxy trust '*'.
+    networks: [web]
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    read_only: true
+    tmpfs: [/tmp]
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN:?Fill DOMAIN in deploy/.env}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks: [web]
+    depends_on:
+      app:
+        condition: service_healthy
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+networks:
+  web:
+volumes:
+  app_data:
+  caddy_data:
+  caddy_config:

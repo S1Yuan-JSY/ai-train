@@ -1,0 +1,16 @@
+{$DOMAIN} {
+    encode zstd gzip
+    request_body {
+        max_size 5MB
+    }
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy same-origin
+        X-Frame-Options DENY
+        Permissions-Policy "camera=(self), microphone=(), geolocation=()"
+        Content-Security-Policy "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    }
+    # Never cache private account, chat or record responses.
+    header Cache-Control "no-store"
+    reverse_proxy app:8787
+}

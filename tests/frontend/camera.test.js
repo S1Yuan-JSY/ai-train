@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {cameraSession} from '../../frontend/public/camera.js';
+const fake=()=>{let stopped=0;return {getTracks:()=>[{stop:()=>stopped++}],get stopped(){return stopped;}};};
+test('closing a pending camera request releases its late stream',async()=>{let resolve;const stream=fake();const session=cameraSession(()=>new Promise(r=>resolve=r));const pending=session.open();session.close();resolve(stream);assert.equal(await pending,null);assert.equal(stream.stopped,1);});
+test('reopening stops active camera and stale request cannot replace new camera',async()=>{const first=fake(),second=fake();let count=0;const session=cameraSession(async options=>{assert.equal(options.audio,false);return ++count===1?first:second;});assert.equal(await session.open(),first);assert.equal(await session.open(),second);assert.equal(first.stopped,1);session.close();session.close();assert.equal(second.stopped,1);});
+test('permission error propagates only while request is active',async()=>{const error=Object.assign(new Error('denied'),{name:'NotAllowedError'});const session=cameraSession(async()=>{throw error;});await assert.rejects(session.open(),{name:'NotAllowedError'});let reject;const pendingSession=cameraSession(()=>new Promise((_,r)=>reject=r));const pending=pendingSession.open();pendingSession.close();reject(error);assert.equal(await pending,null);});

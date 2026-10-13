@@ -1,0 +1,9 @@
+node_modules/
+backend/.env
+backend/data/
+__pycache__/
+.venv/
+.python-deps*/
+
+deploy/.env
+deploy/backups/

@@ -1,0 +1,4186 @@
+{
+  "metadata": {
+    "publisher": "USDA Agricultural Research Service / FoodData Central",
+    "release": "2018-04",
+    "retrieved_at": "2026-10-11",
+    "source_archive": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+    "archive_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "basis": "per 100 g edible portion",
+    "nutrient_ids": {
+      "1008": [
+        "kcal",
+        "KCAL"
+      ],
+      "1003": [
+        "protein",
+        "G"
+      ],
+      "1004": [
+        "fat",
+        "G"
+      ],
+      "1005": [
+        "carbs",
+        "G"
+      ],
+      "1079": [
+        "fiber",
+        "G"
+      ],
+      "1087": [
+        "calcium",
+        "MG"
+      ],
+      "1089": [
+        "iron",
+        "MG"
+      ],
+      "1090": [
+        "magnesium",
+        "MG"
+      ],
+      "1092": [
+        "potassium",
+        "MG"
+      ],
+      "1093": [
+        "sodium",
+        "MG"
+      ],
+      "1095": [
+        "zinc",
+        "MG"
+      ],
+      "1162": [
+        "vitaminC",
+        "MG"
+      ]
+    },
+    "note": "Chinese names, aliases and matching rules are project annotations, not USDA translations."
+  },
+  "foods": [
+    {
+      "fdc_id": 169757,
+      "name": "白米饭（熟，未强化，无盐）",
+      "aliases": [
+        "米饭",
+        "白米饭",
+        "熟米饭"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169757",
+      "description": "Rice, white, long-grain, regular, unenriched, cooked without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 130.0,
+        "protein": 2.69,
+        "fat": 0.28,
+        "carbs": 28.17
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.4,
+        "calcium": 10.0,
+        "iron": 0.2,
+        "magnesium": 12.0,
+        "potassium": 35.0,
+        "sodium": 1.0,
+        "zinc": 0.49,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169757/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169756,
+      "name": "白米（生，未强化）",
+      "aliases": [
+        "生米",
+        "大米",
+        "生大米"
+      ],
+      "category": "主食",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC169756",
+      "description": "Rice, white, long-grain, regular, raw, unenriched",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 365.0,
+        "protein": 7.13,
+        "fat": 0.66,
+        "carbs": 79.95
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.3,
+        "calcium": 28.0,
+        "iron": 0.8,
+        "magnesium": 25.0,
+        "potassium": 115.0,
+        "sodium": 5.0,
+        "zinc": 1.09,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169756/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169704,
+      "name": "糙米饭（熟）",
+      "aliases": [
+        "糙米饭",
+        "熟糙米"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169704",
+      "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 123.0,
+        "protein": 2.74,
+        "fat": 0.97,
+        "carbs": 25.58
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.6,
+        "calcium": 3.0,
+        "iron": 0.56,
+        "magnesium": 39.0,
+        "potassium": 86.0,
+        "sodium": 4.0,
+        "zinc": 0.71,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169704/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169703,
+      "name": "糙米（生）",
+      "aliases": [
+        "生糙米",
+        "糙米"
+      ],
+      "category": "主食",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC169703",
+      "description": "Rice, brown, long-grain, raw (Includes foods for USDA's Food Distribution Program)",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 367.0,
+        "protein": 7.54,
+        "fat": 3.2,
+        "carbs": 76.25
+      },
+      "nutrientsPer100g": {
+        "fiber": 3.6,
+        "calcium": 9.0,
+        "iron": 1.29,
+        "magnesium": 116.0,
+        "potassium": 250.0,
+        "sodium": 5.0,
+        "zinc": 2.13,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169703/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169705,
+      "name": "燕麦（干）",
+      "aliases": [
+        "燕麦",
+        "干燕麦"
+      ],
+      "category": "主食",
+      "state": "dry",
+      "method": "dry",
+      "id": "FDC169705",
+      "description": "Oats (Includes foods for USDA's Food Distribution Program)",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 389.0,
+        "protein": 16.89,
+        "fat": 6.9,
+        "carbs": 66.27
+      },
+      "nutrientsPer100g": {
+        "fiber": 10.6,
+        "calcium": 54.0,
+        "iron": 4.72,
+        "magnesium": 177.0,
+        "potassium": 429.0,
+        "sodium": 2.0,
+        "zinc": 3.97,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169705/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169737,
+      "name": "意大利面（熟，无盐）",
+      "aliases": [
+        "意大利面",
+        "意面",
+        "熟意面"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169737",
+      "description": "Pasta, cooked, enriched, without added salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 158.0,
+        "protein": 5.8,
+        "fat": 0.93,
+        "carbs": 30.86
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.8,
+        "calcium": 7.0,
+        "iron": 1.28,
+        "magnesium": 18.0,
+        "potassium": 44.0,
+        "sodium": 1.0,
+        "zinc": 0.51,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169737/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172688,
+      "name": "全麦面包（商业制作）",
+      "aliases": [
+        "全麦面包"
+      ],
+      "category": "主食",
+      "state": "ready",
+      "method": "baked",
+      "id": "FDC172688",
+      "description": "Bread, whole-wheat, commercially prepared",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 252.0,
+        "protein": 12.45,
+        "fat": 3.5,
+        "carbs": 42.71
+      },
+      "nutrientsPer100g": {
+        "fiber": 6.0,
+        "calcium": 161.0,
+        "iron": 2.47,
+        "magnesium": 75.0,
+        "potassium": 254.0,
+        "sodium": 455.0,
+        "zinc": 1.77,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172688/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170440,
+      "name": "土豆（水煮，去皮，无盐）",
+      "aliases": [
+        "水煮土豆",
+        "煮土豆",
+        "土豆"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170440",
+      "description": "Potatoes, boiled, cooked without skin, flesh, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 86.0,
+        "protein": 1.71,
+        "fat": 0.1,
+        "carbs": 20.01
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.8,
+        "calcium": 8.0,
+        "iron": 0.31,
+        "magnesium": 20.0,
+        "potassium": 328.0,
+        "sodium": 5.0,
+        "zinc": 0.27,
+        "vitaminC": 7.4
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170440/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168484,
+      "name": "红薯（水煮，去皮）",
+      "aliases": [
+        "水煮红薯",
+        "煮红薯",
+        "红薯",
+        "番薯"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168484",
+      "description": "Sweet potato, cooked, boiled, without skin",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 76.0,
+        "protein": 1.37,
+        "fat": 0.14,
+        "carbs": 17.72
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.5,
+        "calcium": 27.0,
+        "iron": 0.72,
+        "magnesium": 18.0,
+        "potassium": 230.0,
+        "sodium": 27.0,
+        "zinc": 0.2,
+        "vitaminC": 12.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168484/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173612,
+      "name": "鸡小腿（烤，肉及皮）",
+      "aliases": [
+        "烤琵琶腿",
+        "烤鸡小腿",
+        "琵琶腿",
+        "鸡小腿"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "roasted",
+      "id": "FDC173612",
+      "description": "Chicken, broilers or fryers, drumstick, meat and skin, cooked, roasted",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 191.0,
+        "protein": 23.35,
+        "fat": 10.15,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 11.0,
+        "iron": 1.11,
+        "magnesium": 22.0,
+        "potassium": 247.0,
+        "sodium": 123.0,
+        "zinc": 2.36,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173612/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173613,
+      "name": "鸡小腿（炖，肉及皮）",
+      "aliases": [
+        "炖鸡小腿",
+        "炖琵琶腿"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "stewed",
+      "id": "FDC173613",
+      "description": "Chicken, broilers or fryers, drumstick, meat and skin, cooked, stewed",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 204.0,
+        "protein": 25.32,
+        "fat": 10.64,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 11.0,
+        "iron": 1.33,
+        "magnesium": 20.0,
+        "potassium": 184.0,
+        "sodium": 76.0,
+        "zinc": 2.65,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173613/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172373,
+      "name": "鸡小腿（生，肉及皮）",
+      "aliases": [
+        "生鸡小腿",
+        "生琵琶腿"
+      ],
+      "category": "肉蛋奶",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC172373",
+      "description": "Chicken, broilers or fryers, drumstick, meat and skin, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 161.0,
+        "protein": 18.08,
+        "fat": 9.2,
+        "carbs": 0.11
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 8.0,
+        "iron": 0.71,
+        "magnesium": 18.0,
+        "potassium": 211.0,
+        "sodium": 106.0,
+        "zinc": 1.86,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172373/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171477,
+      "name": "鸡胸肉（烤，去皮肉）",
+      "aliases": [
+        "烤鸡胸肉",
+        "鸡胸肉"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "roasted",
+      "id": "FDC171477",
+      "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 165.0,
+        "protein": 31.02,
+        "fat": 3.57,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 15.0,
+        "iron": 1.04,
+        "magnesium": 29.0,
+        "potassium": 256.0,
+        "sodium": 74.0,
+        "zinc": 1.0,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171477/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171478,
+      "name": "鸡胸肉（炖，去皮肉）",
+      "aliases": [
+        "炖鸡胸肉"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "stewed",
+      "id": "FDC171478",
+      "description": "Chicken, broilers or fryers, breast, meat only, cooked, stewed",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 151.0,
+        "protein": 28.98,
+        "fat": 3.03,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 13.0,
+        "iron": 0.88,
+        "magnesium": 24.0,
+        "potassium": 187.0,
+        "sodium": 63.0,
+        "zinc": 0.97,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171478/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173424,
+      "name": "鸡蛋（水煮，全蛋）",
+      "aliases": [
+        "水煮蛋",
+        "水煮鸡蛋",
+        "煮鸡蛋",
+        "鸡蛋"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC173424",
+      "description": "Egg, whole, cooked, hard-boiled",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 155.0,
+        "protein": 12.58,
+        "fat": 10.61,
+        "carbs": 1.12
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 50.0,
+        "iron": 1.19,
+        "magnesium": 10.0,
+        "potassium": 126.0,
+        "sodium": 124.0,
+        "zinc": 1.05,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173424/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172217,
+      "name": "全脂牛奶（脂肪3.25%，未额外强化维生素）",
+      "aliases": [
+        "全脂牛奶",
+        "牛奶"
+      ],
+      "category": "肉蛋奶",
+      "state": "ready",
+      "method": "ready",
+      "id": "FDC172217",
+      "description": "Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 61.0,
+        "protein": 3.15,
+        "fat": 3.27,
+        "carbs": 4.78
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 113.0,
+        "iron": 0.03,
+        "magnesium": 10.0,
+        "potassium": 132.0,
+        "sodium": 43.0,
+        "zinc": 0.37,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172217/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171284,
+      "name": "原味全脂酸奶",
+      "aliases": [
+        "原味全脂酸奶",
+        "原味酸奶"
+      ],
+      "category": "肉蛋奶",
+      "state": "ready",
+      "method": "ready",
+      "id": "FDC171284",
+      "description": "Yogurt, plain, whole milk",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 61.0,
+        "protein": 3.47,
+        "fat": 3.25,
+        "carbs": 4.66
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 121.0,
+        "iron": 0.05,
+        "magnesium": 12.0,
+        "potassium": 155.0,
+        "sodium": 46.0,
+        "zinc": 0.59,
+        "vitaminC": 0.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171284/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 175167,
+      "name": "大西洋养殖三文鱼（生）",
+      "aliases": [
+        "生三文鱼",
+        "三文鱼刺身"
+      ],
+      "category": "肉蛋奶",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC175167",
+      "description": "Fish, salmon, Atlantic, farmed, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 208.0,
+        "protein": 20.42,
+        "fat": 13.42,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 9.0,
+        "iron": 0.34,
+        "magnesium": 27.0,
+        "potassium": 363.0,
+        "sodium": 59.0,
+        "zinc": 0.36,
+        "vitaminC": 3.9
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/175167/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 175168,
+      "name": "大西洋养殖三文鱼（干热烹调）",
+      "aliases": [
+        "烤三文鱼",
+        "三文鱼"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "roasted",
+      "id": "FDC175168",
+      "description": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 206.0,
+        "protein": 22.1,
+        "fat": 12.35,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 15.0,
+        "iron": 0.34,
+        "magnesium": 30.0,
+        "potassium": 384.0,
+        "sodium": 61.0,
+        "zinc": 0.43,
+        "vitaminC": 3.7
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/175168/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169967,
+      "name": "西兰花（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮西兰花",
+        "熟西兰花",
+        "西兰花"
+      ],
+      "category": "蔬果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169967",
+      "description": "Broccoli, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 35.0,
+        "protein": 2.38,
+        "fat": 0.41,
+        "carbs": 7.18
+      },
+      "nutrientsPer100g": {
+        "fiber": 3.3,
+        "calcium": 40.0,
+        "iron": 0.67,
+        "magnesium": 21.0,
+        "potassium": 293.0,
+        "sodium": 41.0,
+        "zinc": 0.45,
+        "vitaminC": 64.9
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169967/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170457,
+      "name": "番茄（生）",
+      "aliases": [
+        "番茄",
+        "西红柿"
+      ],
+      "category": "蔬果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC170457",
+      "description": "Tomatoes, red, ripe, raw, year round average",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 18.0,
+        "protein": 0.88,
+        "fat": 0.2,
+        "carbs": 3.89
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.2,
+        "calcium": 10.0,
+        "iron": 0.27,
+        "magnesium": 11.0,
+        "potassium": 237.0,
+        "sodium": 5.0,
+        "zinc": 0.17,
+        "vitaminC": 13.7
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168409,
+      "name": "黄瓜（生，带皮）",
+      "aliases": [
+        "黄瓜"
+      ],
+      "category": "蔬果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC168409",
+      "description": "Cucumber, with peel, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 15.0,
+        "protein": 0.65,
+        "fat": 0.11,
+        "carbs": 3.63
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.5,
+        "calcium": 16.0,
+        "iron": 0.28,
+        "magnesium": 13.0,
+        "potassium": 147.0,
+        "sodium": 2.0,
+        "zinc": 0.2,
+        "vitaminC": 2.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170393,
+      "name": "胡萝卜（生）",
+      "aliases": [
+        "胡萝卜"
+      ],
+      "category": "蔬果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC170393",
+      "description": "Carrots, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 41.0,
+        "protein": 0.93,
+        "fat": 0.24,
+        "carbs": 9.58
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.8,
+        "calcium": 33.0,
+        "iron": 0.3,
+        "magnesium": 12.0,
+        "potassium": 320.0,
+        "sodium": 69.0,
+        "zinc": 0.24,
+        "vitaminC": 5.9
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168463,
+      "name": "菠菜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮菠菜",
+        "熟菠菜",
+        "菠菜"
+      ],
+      "category": "蔬果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168463",
+      "description": "Spinach, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 23.0,
+        "protein": 2.97,
+        "fat": 0.26,
+        "carbs": 3.75
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.4,
+        "calcium": 136.0,
+        "iron": 3.57,
+        "magnesium": 87.0,
+        "potassium": 466.0,
+        "sodium": 70.0,
+        "zinc": 0.76,
+        "vitaminC": 9.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168463/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173944,
+      "name": "香蕉（生）",
+      "aliases": [
+        "香蕉"
+      ],
+      "category": "蔬果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC173944",
+      "description": "Bananas, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 89.0,
+        "protein": 1.09,
+        "fat": 0.33,
+        "carbs": 22.84
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.6,
+        "calcium": 5.0,
+        "iron": 0.26,
+        "magnesium": 27.0,
+        "potassium": 358.0,
+        "sodium": 1.0,
+        "zinc": 0.15,
+        "vitaminC": 8.7
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173944/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171688,
+      "name": "苹果（生，带皮）",
+      "aliases": [
+        "苹果"
+      ],
+      "category": "蔬果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC171688",
+      "description": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 52.0,
+        "protein": 0.26,
+        "fat": 0.17,
+        "carbs": 13.81
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.4,
+        "calcium": 6.0,
+        "iron": 0.12,
+        "magnesium": 5.0,
+        "potassium": 107.0,
+        "sodium": 1.0,
+        "zinc": 0.04,
+        "vitaminC": 4.6
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171688/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169097,
+      "name": "橙子（生）",
+      "aliases": [
+        "橙子",
+        "橙"
+      ],
+      "category": "蔬果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC169097",
+      "description": "Oranges, raw, all commercial varieties",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 47.0,
+        "protein": 0.94,
+        "fat": 0.12,
+        "carbs": 11.75
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.4,
+        "calcium": 40.0,
+        "iron": 0.1,
+        "magnesium": 10.0,
+        "potassium": 181.0,
+        "sodium": 0.0,
+        "zinc": 0.07,
+        "vitaminC": 53.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169097/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 167762,
+      "name": "草莓（生）",
+      "aliases": [
+        "草莓"
+      ],
+      "category": "蔬果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC167762",
+      "description": "Strawberries, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 32.0,
+        "protein": 0.67,
+        "fat": 0.3,
+        "carbs": 7.68
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.0,
+        "calcium": 16.0,
+        "iron": 0.41,
+        "magnesium": 13.0,
+        "potassium": 153.0,
+        "sodium": 1.0,
+        "zinc": 0.14,
+        "vitaminC": 58.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/167762/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172475,
+      "name": "硬豆腐（硫酸钙凝固，未经烹调）",
+      "aliases": [
+        "硬豆腐",
+        "北豆腐"
+      ],
+      "category": "豆类坚果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC172475",
+      "description": "Tofu, raw, firm, prepared with calcium sulfate",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 144.0,
+        "protein": 17.27,
+        "fat": 8.72,
+        "carbs": 2.78
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.3,
+        "calcium": 683.0,
+        "iron": 2.66,
+        "magnesium": 58.0,
+        "potassium": 237.0,
+        "sodium": 14.0,
+        "zinc": 1.57,
+        "vitaminC": 0.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172475/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172476,
+      "name": "普通豆腐（硫酸钙凝固，未经烹调）",
+      "aliases": [
+        "普通豆腐",
+        "豆腐"
+      ],
+      "category": "豆类坚果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC172476",
+      "description": "Tofu, raw, regular, prepared with calcium sulfate",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 76.0,
+        "protein": 8.08,
+        "fat": 4.78,
+        "carbs": 1.87
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.3,
+        "calcium": 350.0,
+        "iron": 5.36,
+        "magnesium": 30.0,
+        "potassium": 121.0,
+        "sodium": 7.0,
+        "zinc": 0.8,
+        "vitaminC": 0.1
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172476/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170158,
+      "name": "扁桃仁（干烤，无盐）",
+      "aliases": [
+        "扁桃仁",
+        "巴旦木"
+      ],
+      "category": "豆类坚果",
+      "state": "ready",
+      "method": "roasted",
+      "id": "FDC170158",
+      "description": "Nuts, almonds, dry roasted, without salt added",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 598.0,
+        "protein": 20.96,
+        "fat": 52.54,
+        "carbs": 21.01
+      },
+      "nutrientsPer100g": {
+        "fiber": 10.9,
+        "calcium": 268.0,
+        "iron": 3.73,
+        "magnesium": 279.0,
+        "potassium": 713.0,
+        "sodium": 3.0,
+        "zinc": 3.31,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170158/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173806,
+      "name": "花生（干烤，无盐）",
+      "aliases": [
+        "烤花生",
+        "花生"
+      ],
+      "category": "豆类坚果",
+      "state": "ready",
+      "method": "roasted",
+      "id": "FDC173806",
+      "description": "Peanuts, all types, dry-roasted, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 587.0,
+        "protein": 24.35,
+        "fat": 49.66,
+        "carbs": 21.26
+      },
+      "nutrientsPer100g": {
+        "fiber": 8.4,
+        "calcium": 58.0,
+        "iron": 1.58,
+        "magnesium": 178.0,
+        "potassium": 634.0,
+        "sodium": 6.0,
+        "zinc": 2.77,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173806/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171413,
+      "name": "橄榄油",
+      "aliases": [
+        "橄榄油"
+      ],
+      "category": "油脂",
+      "state": "ready",
+      "method": "ready",
+      "id": "FDC171413",
+      "description": "Oil, olive, salad or cooking",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 884.0,
+        "protein": 0.0,
+        "fat": 100.0,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 1.0,
+        "iron": 0.56,
+        "magnesium": 0.0,
+        "potassium": 1.0,
+        "sodium": 2.0,
+        "zinc": 0.0,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168394,
+      "name": "苦瓜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮苦瓜",
+        "煮苦瓜",
+        "熟苦瓜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168394",
+      "description": "Balsam-pear (bitter gourd), pods, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 19.0,
+        "protein": 0.84,
+        "fat": 0.18,
+        "carbs": 4.32
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.0,
+        "calcium": 9.0,
+        "iron": 0.38,
+        "magnesium": 16.0,
+        "potassium": 319.0,
+        "sodium": 6.0,
+        "zinc": 0.77,
+        "vitaminC": 33.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168394/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168415,
+      "name": "丝瓜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮丝瓜",
+        "煮丝瓜",
+        "熟丝瓜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168415",
+      "description": "Gourd, dishcloth (towelgourd), cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 56.0,
+        "protein": 0.66,
+        "fat": 0.34,
+        "carbs": 14.34
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.9,
+        "calcium": 9.0,
+        "iron": 0.36,
+        "magnesium": 20.0,
+        "potassium": 453.0,
+        "sodium": 21.0,
+        "zinc": 0.17,
+        "vitaminC": 5.7
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168415/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168430,
+      "name": "莲藕（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮莲藕",
+        "煮莲藕",
+        "熟莲藕"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168430",
+      "description": "Lotus root, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 66.0,
+        "protein": 1.58,
+        "fat": 0.07,
+        "carbs": 16.02
+      },
+      "nutrientsPer100g": {
+        "fiber": 3.1,
+        "calcium": 26.0,
+        "iron": 0.9,
+        "magnesium": 22.0,
+        "potassium": 363.0,
+        "sodium": 45.0,
+        "zinc": 0.33,
+        "vitaminC": 27.4
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168430/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168449,
+      "name": "南瓜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮南瓜",
+        "煮南瓜",
+        "熟南瓜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168449",
+      "description": "Pumpkin, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 20.0,
+        "protein": 0.72,
+        "fat": 0.07,
+        "carbs": 4.9
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.1,
+        "calcium": 15.0,
+        "iron": 0.57,
+        "magnesium": 9.0,
+        "potassium": 230.0,
+        "sodium": 1.0,
+        "zinc": 0.23,
+        "vitaminC": 4.7
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168449/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168452,
+      "name": "白萝卜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮白萝卜",
+        "煮白萝卜",
+        "熟白萝卜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168452",
+      "description": "Radishes, oriental, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 17.0,
+        "protein": 0.67,
+        "fat": 0.24,
+        "carbs": 3.43
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.6,
+        "calcium": 17.0,
+        "iron": 0.15,
+        "magnesium": 9.0,
+        "potassium": 285.0,
+        "sodium": 13.0,
+        "zinc": 0.13,
+        "vitaminC": 15.1
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168452/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169137,
+      "name": "绿豆芽（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮绿豆芽",
+        "煮绿豆芽",
+        "熟绿豆芽"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169137",
+      "description": "Mung beans, mature seeds, sprouted, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 21.0,
+        "protein": 2.03,
+        "fat": 0.09,
+        "carbs": 4.19
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.8,
+        "calcium": 12.0,
+        "iron": 0.65,
+        "magnesium": 14.0,
+        "potassium": 101.0,
+        "sodium": 10.0,
+        "zinc": 0.47,
+        "vitaminC": 11.4
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169137/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169141,
+      "name": "四季豆（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮四季豆",
+        "煮四季豆",
+        "熟四季豆"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169141",
+      "description": "Beans, snap, green, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 35.0,
+        "protein": 1.89,
+        "fat": 0.28,
+        "carbs": 7.88
+      },
+      "nutrientsPer100g": {
+        "fiber": 3.2,
+        "calcium": 44.0,
+        "iron": 0.65,
+        "magnesium": 18.0,
+        "potassium": 146.0,
+        "sodium": 1.0,
+        "zinc": 0.25,
+        "vitaminC": 9.7
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169141/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169202,
+      "name": "苋菜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮苋菜",
+        "煮苋菜",
+        "熟苋菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169202",
+      "description": "Amaranth leaves, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 21.0,
+        "protein": 2.11,
+        "fat": 0.18,
+        "carbs": 4.11
+      },
+      "nutrientsPer100g": {
+        "fiber": null,
+        "calcium": 209.0,
+        "iron": 2.26,
+        "magnesium": 55.0,
+        "potassium": 641.0,
+        "sodium": 21.0,
+        "zinc": 0.88,
+        "vitaminC": 41.1
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169202/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169204,
+      "name": "慈姑（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮慈姑",
+        "煮慈姑",
+        "熟慈姑"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169204",
+      "description": "Arrowhead, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 78.0,
+        "protein": 4.49,
+        "fat": 0.1,
+        "carbs": 16.14
+      },
+      "nutrientsPer100g": {
+        "fiber": null,
+        "calcium": 7.0,
+        "iron": 1.21,
+        "magnesium": 49.0,
+        "potassium": 881.0,
+        "sodium": 18.0,
+        "zinc": 0.22,
+        "vitaminC": 0.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169204/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169211,
+      "name": "竹笋（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮竹笋",
+        "煮竹笋",
+        "熟竹笋"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169211",
+      "description": "Bamboo shoots, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 12.0,
+        "protein": 1.53,
+        "fat": 0.22,
+        "carbs": 1.92
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.0,
+        "calcium": 12.0,
+        "iron": 0.24,
+        "magnesium": 3.0,
+        "potassium": 533.0,
+        "sodium": 4.0,
+        "zinc": 0.47,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169211/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169223,
+      "name": "豇豆（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮豇豆",
+        "煮豇豆",
+        "熟豇豆"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169223",
+      "description": "Yardlong bean, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 47.0,
+        "protein": 2.53,
+        "fat": 0.1,
+        "carbs": 9.18
+      },
+      "nutrientsPer100g": {
+        "fiber": null,
+        "calcium": 44.0,
+        "iron": 0.98,
+        "magnesium": 42.0,
+        "potassium": 290.0,
+        "sodium": 4.0,
+        "zinc": 0.36,
+        "vitaminC": 16.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169223/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169229,
+      "name": "茄子（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮茄子",
+        "煮茄子",
+        "熟茄子"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169229",
+      "description": "Eggplant, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 35.0,
+        "protein": 0.83,
+        "fat": 0.23,
+        "carbs": 8.73
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.5,
+        "calcium": 6.0,
+        "iron": 0.25,
+        "magnesium": 11.0,
+        "potassium": 123.0,
+        "sodium": 1.0,
+        "zinc": 0.12,
+        "vitaminC": 1.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169229/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169233,
+      "name": "瓠瓜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮瓠瓜",
+        "煮瓠瓜",
+        "熟瓠瓜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169233",
+      "description": "Gourd, white-flowered (calabash), cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 15.0,
+        "protein": 0.6,
+        "fat": 0.02,
+        "carbs": 3.69
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.2,
+        "calcium": 24.0,
+        "iron": 0.25,
+        "magnesium": 11.0,
+        "potassium": 170.0,
+        "sodium": 2.0,
+        "zinc": 0.7,
+        "vitaminC": 8.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169233/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169252,
+      "name": "白蘑菇（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮白蘑菇",
+        "煮白蘑菇",
+        "熟白蘑菇"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169252",
+      "description": "Mushrooms, white, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 28.0,
+        "protein": 2.17,
+        "fat": 0.47,
+        "carbs": 5.29
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.2,
+        "calcium": 6.0,
+        "iron": 1.74,
+        "magnesium": 12.0,
+        "potassium": 356.0,
+        "sodium": 2.0,
+        "zinc": 0.87,
+        "vitaminC": 4.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169252/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169257,
+      "name": "芥菜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮芥菜",
+        "煮芥菜",
+        "熟芥菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169257",
+      "description": "Mustard greens, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 26.0,
+        "protein": 2.56,
+        "fat": 0.47,
+        "carbs": 4.51
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.0,
+        "calcium": 118.0,
+        "iron": 0.87,
+        "magnesium": 13.0,
+        "potassium": 162.0,
+        "sodium": 9.0,
+        "zinc": 0.22,
+        "vitaminC": 25.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169257/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169261,
+      "name": "秋葵（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮秋葵",
+        "煮秋葵",
+        "熟秋葵"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169261",
+      "description": "Okra, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 22.0,
+        "protein": 1.87,
+        "fat": 0.21,
+        "carbs": 4.51
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.5,
+        "calcium": 77.0,
+        "iron": 0.28,
+        "magnesium": 36.0,
+        "potassium": 135.0,
+        "sodium": 6.0,
+        "zinc": 0.43,
+        "vitaminC": 16.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169261/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169275,
+      "name": "马齿苋（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮马齿苋",
+        "煮马齿苋",
+        "熟马齿苋"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169275",
+      "description": "Purslane, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 18.0,
+        "protein": 1.49,
+        "fat": 0.19,
+        "carbs": 3.55
+      },
+      "nutrientsPer100g": {
+        "fiber": null,
+        "calcium": 78.0,
+        "iron": 0.77,
+        "magnesium": 67.0,
+        "potassium": 488.0,
+        "sodium": 44.0,
+        "zinc": 0.17,
+        "vitaminC": 10.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169275/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169283,
+      "name": "毛豆仁（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮毛豆仁",
+        "煮毛豆仁",
+        "熟毛豆仁"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169283",
+      "description": "Soybeans, green, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 141.0,
+        "protein": 12.35,
+        "fat": 6.4,
+        "carbs": 11.05
+      },
+      "nutrientsPer100g": {
+        "fiber": 4.2,
+        "calcium": 145.0,
+        "iron": 2.5,
+        "magnesium": 60.0,
+        "potassium": 539.0,
+        "sodium": 14.0,
+        "zinc": 0.91,
+        "vitaminC": 17.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169283/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169292,
+      "name": "西葫芦（带皮）（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮西葫芦",
+        "煮西葫芦",
+        "熟西葫芦"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169292",
+      "description": "Squash, summer, zucchini, includes skin, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 15.0,
+        "protein": 1.14,
+        "fat": 0.36,
+        "carbs": 2.69
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.0,
+        "calcium": 18.0,
+        "iron": 0.37,
+        "magnesium": 19.0,
+        "potassium": 264.0,
+        "sodium": 3.0,
+        "zinc": 0.33,
+        "vitaminC": 12.9
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169292/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169302,
+      "name": "空心菜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮空心菜",
+        "煮空心菜",
+        "熟空心菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169302",
+      "description": "Water convolvulus, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 20.0,
+        "protein": 2.08,
+        "fat": 0.24,
+        "carbs": 3.7
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.9,
+        "calcium": 54.0,
+        "iron": 1.32,
+        "magnesium": 30.0,
+        "potassium": 284.0,
+        "sodium": 122.0,
+        "zinc": 0.16,
+        "vitaminC": 16.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169302/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169976,
+      "name": "卷心菜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮卷心菜",
+        "煮卷心菜",
+        "熟卷心菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169976",
+      "description": "Cabbage, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 23.0,
+        "protein": 1.27,
+        "fat": 0.06,
+        "carbs": 5.51
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.9,
+        "calcium": 48.0,
+        "iron": 0.17,
+        "magnesium": 15.0,
+        "potassium": 196.0,
+        "sodium": 8.0,
+        "zinc": 0.2,
+        "vitaminC": 37.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169976/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169978,
+      "name": "紫甘蓝（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮紫甘蓝",
+        "煮紫甘蓝",
+        "熟紫甘蓝"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169978",
+      "description": "Cabbage, red, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 29.0,
+        "protein": 1.51,
+        "fat": 0.09,
+        "carbs": 6.94
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.6,
+        "calcium": 42.0,
+        "iron": 0.66,
+        "magnesium": 17.0,
+        "potassium": 262.0,
+        "sodium": 28.0,
+        "zinc": 0.25,
+        "vitaminC": 34.4
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169978/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169980,
+      "name": "大白菜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮大白菜",
+        "煮大白菜",
+        "熟大白菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169980",
+      "description": "Cabbage, chinese (pe-tsai), cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 14.0,
+        "protein": 1.5,
+        "fat": 0.17,
+        "carbs": 2.41
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.7,
+        "calcium": 32.0,
+        "iron": 0.3,
+        "magnesium": 10.0,
+        "potassium": 225.0,
+        "sodium": 9.0,
+        "zinc": 0.18,
+        "vitaminC": 15.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169980/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169989,
+      "name": "芹菜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮芹菜",
+        "煮芹菜",
+        "熟芹菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169989",
+      "description": "Celery, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 18.0,
+        "protein": 0.83,
+        "fat": 0.16,
+        "carbs": 4.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.6,
+        "calcium": 42.0,
+        "iron": 0.42,
+        "magnesium": 12.0,
+        "potassium": 284.0,
+        "sodium": 91.0,
+        "zinc": 0.14,
+        "vitaminC": 6.1
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169989/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169999,
+      "name": "甜玉米（黄）（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮甜玉米",
+        "煮甜玉米",
+        "熟甜玉米"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169999",
+      "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 96.0,
+        "protein": 3.41,
+        "fat": 1.5,
+        "carbs": 20.98
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.4,
+        "calcium": 3.0,
+        "iron": 0.45,
+        "magnesium": 26.0,
+        "potassium": 218.0,
+        "sodium": 1.0,
+        "zinc": 0.62,
+        "vitaminC": 5.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169999/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170001,
+      "name": "洋葱（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮洋葱",
+        "煮洋葱",
+        "熟洋葱"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170001",
+      "description": "Onions, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 44.0,
+        "protein": 1.36,
+        "fat": 0.19,
+        "carbs": 10.15
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.4,
+        "calcium": 22.0,
+        "iron": 0.24,
+        "magnesium": 11.0,
+        "potassium": 166.0,
+        "sodium": 3.0,
+        "zinc": 0.21,
+        "vitaminC": 5.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170001/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170011,
+      "name": "荷兰豆（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮荷兰豆",
+        "煮荷兰豆",
+        "熟荷兰豆"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170011",
+      "description": "Peas, edible-podded, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 42.0,
+        "protein": 3.27,
+        "fat": 0.23,
+        "carbs": 7.05
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.8,
+        "calcium": 42.0,
+        "iron": 1.97,
+        "magnesium": 26.0,
+        "potassium": 240.0,
+        "sodium": 4.0,
+        "zinc": 0.37,
+        "vitaminC": 47.9
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170011/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170110,
+      "name": "红甜椒（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮红甜椒",
+        "煮红甜椒",
+        "熟红甜椒"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170110",
+      "description": "Peppers, sweet, red, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 28.0,
+        "protein": 0.92,
+        "fat": 0.2,
+        "carbs": 6.7
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.2,
+        "calcium": 9.0,
+        "iron": 0.46,
+        "magnesium": 10.0,
+        "potassium": 166.0,
+        "sodium": 2.0,
+        "zinc": 0.12,
+        "vitaminC": 171.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170110/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170378,
+      "name": "嫩蚕豆（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮嫩蚕豆",
+        "煮嫩蚕豆",
+        "熟嫩蚕豆"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170378",
+      "description": "Broadbeans, immature seeds, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 62.0,
+        "protein": 4.8,
+        "fat": 0.5,
+        "carbs": 10.1
+      },
+      "nutrientsPer100g": {
+        "fiber": 3.6,
+        "calcium": 18.0,
+        "iron": 1.5,
+        "magnesium": 31.0,
+        "potassium": 193.0,
+        "sodium": 41.0,
+        "zinc": 0.47,
+        "vitaminC": 19.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170378/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170384,
+      "name": "牛蒡根（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮牛蒡根",
+        "煮牛蒡根",
+        "熟牛蒡根"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170384",
+      "description": "Burdock root, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 88.0,
+        "protein": 2.09,
+        "fat": 0.14,
+        "carbs": 21.15
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.8,
+        "calcium": 49.0,
+        "iron": 0.77,
+        "magnesium": 39.0,
+        "potassium": 360.0,
+        "sodium": 4.0,
+        "zinc": 0.38,
+        "vitaminC": 2.6
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170384/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170391,
+      "name": "小白菜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮小白菜",
+        "煮小白菜",
+        "熟小白菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170391",
+      "description": "Cabbage, chinese (pak-choi), cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 12.0,
+        "protein": 1.56,
+        "fat": 0.16,
+        "carbs": 1.78
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.0,
+        "calcium": 93.0,
+        "iron": 1.04,
+        "magnesium": 11.0,
+        "potassium": 371.0,
+        "sodium": 34.0,
+        "zinc": 0.17,
+        "vitaminC": 26.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170391/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170394,
+      "name": "胡萝卜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮胡萝卜",
+        "煮胡萝卜",
+        "熟胡萝卜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170394",
+      "description": "Carrots, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 35.0,
+        "protein": 0.76,
+        "fat": 0.18,
+        "carbs": 8.22
+      },
+      "nutrientsPer100g": {
+        "fiber": 3.0,
+        "calcium": 30.0,
+        "iron": 0.34,
+        "magnesium": 10.0,
+        "potassium": 235.0,
+        "sodium": 58.0,
+        "zinc": 0.2,
+        "vitaminC": 3.6
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170394/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170397,
+      "name": "菜花（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮菜花",
+        "煮菜花",
+        "熟菜花"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170397",
+      "description": "Cauliflower, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 23.0,
+        "protein": 1.84,
+        "fat": 0.45,
+        "carbs": 4.11
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.3,
+        "calcium": 16.0,
+        "iron": 0.32,
+        "magnesium": 9.0,
+        "potassium": 142.0,
+        "sodium": 15.0,
+        "zinc": 0.17,
+        "vitaminC": 44.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170397/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170403,
+      "name": "佛手瓜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮佛手瓜",
+        "煮佛手瓜",
+        "熟佛手瓜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170403",
+      "description": "Chayote, fruit, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 24.0,
+        "protein": 0.62,
+        "fat": 0.48,
+        "carbs": 5.09
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.8,
+        "calcium": 13.0,
+        "iron": 0.22,
+        "magnesium": 12.0,
+        "potassium": 173.0,
+        "sodium": 1.0,
+        "zinc": 0.31,
+        "vitaminC": 8.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170403/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170405,
+      "name": "茼蒿（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮茼蒿",
+        "煮茼蒿",
+        "熟茼蒿"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170405",
+      "description": "Chrysanthemum, garland, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 20.0,
+        "protein": 1.64,
+        "fat": 0.09,
+        "carbs": 4.31
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.3,
+        "calcium": 69.0,
+        "iron": 3.74,
+        "magnesium": 18.0,
+        "potassium": 569.0,
+        "sodium": 53.0,
+        "zinc": 0.2,
+        "vitaminC": 23.9
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170405/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170420,
+      "name": "青豌豆（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮青豌豆",
+        "煮青豌豆",
+        "熟青豌豆"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170420",
+      "description": "Peas, green, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 84.0,
+        "protein": 5.36,
+        "fat": 0.22,
+        "carbs": 15.63
+      },
+      "nutrientsPer100g": {
+        "fiber": 5.5,
+        "calcium": 27.0,
+        "iron": 1.54,
+        "magnesium": 39.0,
+        "potassium": 271.0,
+        "sodium": 3.0,
+        "zinc": 1.19,
+        "vitaminC": 14.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170420/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170428,
+      "name": "青椒（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮青椒",
+        "煮青椒",
+        "熟青椒"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170428",
+      "description": "Peppers, sweet, green, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 28.0,
+        "protein": 0.92,
+        "fat": 0.2,
+        "carbs": 6.7
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.2,
+        "calcium": 9.0,
+        "iron": 0.46,
+        "magnesium": 10.0,
+        "potassium": 166.0,
+        "sodium": 2.0,
+        "zinc": 0.12,
+        "vitaminC": 74.4
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170428/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170475,
+      "name": "冬瓜（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮冬瓜",
+        "煮冬瓜",
+        "熟冬瓜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC170475",
+      "description": "Waxgourd, (chinese preserving melon), cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 14.0,
+        "protein": 0.4,
+        "fat": 0.2,
+        "carbs": 3.04
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.0,
+        "calcium": 18.0,
+        "iron": 0.38,
+        "magnesium": 10.0,
+        "potassium": 5.0,
+        "sodium": 107.0,
+        "zinc": 0.59,
+        "vitaminC": 10.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170475/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168539,
+      "name": "甜玉米（白）（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮甜玉米",
+        "煮甜玉米",
+        "熟甜玉米"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168539",
+      "description": "Corn, sweet, white, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 97.0,
+        "protein": 3.34,
+        "fat": 1.41,
+        "carbs": 21.71
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.7,
+        "calcium": 2.0,
+        "iron": 0.55,
+        "magnesium": 31.0,
+        "potassium": 252.0,
+        "sodium": 3.0,
+        "zinc": 0.54,
+        "vitaminC": 6.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168539/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169238,
+      "name": "羽衣甘蓝（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮羽衣甘蓝",
+        "煮羽衣甘蓝",
+        "熟羽衣甘蓝"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC169238",
+      "description": "Kale, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 36.0,
+        "protein": 2.94,
+        "fat": 1.21,
+        "carbs": 5.3
+      },
+      "nutrientsPer100g": {
+        "fiber": 4.0,
+        "calcium": 150.0,
+        "iron": 0.84,
+        "magnesium": 25.0,
+        "potassium": 144.0,
+        "sodium": 16.0,
+        "zinc": 0.27,
+        "vitaminC": 17.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169238/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168425,
+      "name": "苤蓝（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮苤蓝",
+        "煮苤蓝",
+        "熟苤蓝"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168425",
+      "description": "Kohlrabi, cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 29.0,
+        "protein": 1.8,
+        "fat": 0.11,
+        "carbs": 6.69
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.1,
+        "calcium": 25.0,
+        "iron": 0.4,
+        "magnesium": 19.0,
+        "potassium": 340.0,
+        "sodium": 21.0,
+        "zinc": 0.31,
+        "vitaminC": 54.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168425/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168426,
+      "name": "韭葱（水煮，沥干，无盐）",
+      "aliases": [
+        "水煮韭葱",
+        "煮韭葱",
+        "熟韭葱"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC168426",
+      "description": "Leeks, (bulb and lower leaf-portion), cooked, boiled, drained, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 31.0,
+        "protein": 0.81,
+        "fat": 0.2,
+        "carbs": 7.62
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.0,
+        "calcium": 30.0,
+        "iron": 1.1,
+        "magnesium": 14.0,
+        "potassium": 87.0,
+        "sodium": 10.0,
+        "zinc": 0.06,
+        "vitaminC": 4.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168426/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173728,
+      "name": "红小豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮红小豆",
+        "煮红小豆",
+        "熟红小豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC173728",
+      "description": "Beans, adzuki, mature seeds, cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 128.0,
+        "protein": 7.52,
+        "fat": 0.1,
+        "carbs": 24.77
+      },
+      "nutrientsPer100g": {
+        "fiber": 7.3,
+        "calcium": 28.0,
+        "iron": 2.0,
+        "magnesium": 52.0,
+        "potassium": 532.0,
+        "sodium": 8.0,
+        "zinc": 1.77,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173728/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174257,
+      "name": "绿豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮绿豆",
+        "煮绿豆",
+        "熟绿豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC174257",
+      "description": "Mung beans, mature seeds, cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 105.0,
+        "protein": 7.02,
+        "fat": 0.38,
+        "carbs": 19.15
+      },
+      "nutrientsPer100g": {
+        "fiber": 7.6,
+        "calcium": 27.0,
+        "iron": 1.4,
+        "magnesium": 48.0,
+        "potassium": 266.0,
+        "sodium": 2.0,
+        "zinc": 0.84,
+        "vitaminC": 1.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174257/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174271,
+      "name": "黄豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮黄豆",
+        "煮黄豆",
+        "熟黄豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC174271",
+      "description": "Soybeans, mature cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 172.0,
+        "protein": 18.21,
+        "fat": 8.97,
+        "carbs": 8.36
+      },
+      "nutrientsPer100g": {
+        "fiber": 6.0,
+        "calcium": 102.0,
+        "iron": 5.14,
+        "magnesium": 86.0,
+        "potassium": 515.0,
+        "sodium": 1.0,
+        "zinc": 1.15,
+        "vitaminC": 1.7
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174271/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173740,
+      "name": "芸豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮芸豆",
+        "煮芸豆",
+        "熟芸豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC173740",
+      "description": "Beans, kidney, all types, mature seeds, cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 127.0,
+        "protein": 8.67,
+        "fat": 0.5,
+        "carbs": 22.8
+      },
+      "nutrientsPer100g": {
+        "fiber": 6.4,
+        "calcium": 35.0,
+        "iron": 2.22,
+        "magnesium": 42.0,
+        "potassium": 405.0,
+        "sodium": 1.0,
+        "zinc": 1.0,
+        "vitaminC": 1.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173740/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173753,
+      "name": "干蚕豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮干蚕豆",
+        "煮干蚕豆",
+        "熟干蚕豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC173753",
+      "description": "Broadbeans (fava beans), mature seeds, cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 110.0,
+        "protein": 7.6,
+        "fat": 0.4,
+        "carbs": 19.65
+      },
+      "nutrientsPer100g": {
+        "fiber": 5.4,
+        "calcium": 36.0,
+        "iron": 1.5,
+        "magnesium": 43.0,
+        "potassium": 268.0,
+        "sodium": 5.0,
+        "zinc": 1.01,
+        "vitaminC": 0.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173753/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173757,
+      "name": "鹰嘴豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮鹰嘴豆",
+        "煮鹰嘴豆",
+        "熟鹰嘴豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC173757",
+      "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 164.0,
+        "protein": 8.86,
+        "fat": 2.59,
+        "carbs": 27.42
+      },
+      "nutrientsPer100g": {
+        "fiber": 7.6,
+        "calcium": 49.0,
+        "iron": 2.89,
+        "magnesium": 48.0,
+        "potassium": 291.0,
+        "sodium": 7.0,
+        "zinc": 1.53,
+        "vitaminC": 1.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173757/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172421,
+      "name": "小扁豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮小扁豆",
+        "煮小扁豆",
+        "熟小扁豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC172421",
+      "description": "Lentils, mature seeds, cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 116.0,
+        "protein": 9.02,
+        "fat": 0.38,
+        "carbs": 20.13
+      },
+      "nutrientsPer100g": {
+        "fiber": 7.9,
+        "calcium": 19.0,
+        "iron": 3.33,
+        "magnesium": 36.0,
+        "potassium": 369.0,
+        "sodium": 2.0,
+        "zinc": 1.27,
+        "vitaminC": 1.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172421/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 175194,
+      "name": "红腰豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮红腰豆",
+        "煮红腰豆",
+        "熟红腰豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC175194",
+      "description": "Beans, kidney, red, mature seeds, cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 127.0,
+        "protein": 8.67,
+        "fat": 0.5,
+        "carbs": 22.8
+      },
+      "nutrientsPer100g": {
+        "fiber": 7.4,
+        "calcium": 28.0,
+        "iron": 2.94,
+        "magnesium": 45.0,
+        "potassium": 403.0,
+        "sodium": 2.0,
+        "zinc": 1.07,
+        "vitaminC": 1.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/175194/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173759,
+      "name": "黑眼豆（成熟豆粒，水煮，无盐）",
+      "aliases": [
+        "水煮黑眼豆",
+        "煮黑眼豆",
+        "熟黑眼豆"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC173759",
+      "description": "Cowpeas, common (blackeyes, crowder, southern), mature seeds, cooked, boiled, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 116.0,
+        "protein": 7.73,
+        "fat": 0.53,
+        "carbs": 20.76
+      },
+      "nutrientsPer100g": {
+        "fiber": 6.5,
+        "calcium": 24.0,
+        "iron": 2.51,
+        "magnesium": 53.0,
+        "potassium": 278.0,
+        "sodium": 4.0,
+        "zinc": 1.29,
+        "vitaminC": 0.4
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173759/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168871,
+      "name": "小米饭（熟）",
+      "aliases": [
+        "小米饭",
+        "熟小米"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "cooked",
+      "id": "FDC168871",
+      "description": "Millet, cooked",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 119.0,
+        "protein": 3.51,
+        "fat": 1.0,
+        "carbs": 23.67
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.3,
+        "calcium": 3.0,
+        "iron": 0.63,
+        "magnesium": 44.0,
+        "potassium": 62.0,
+        "sodium": 2.0,
+        "zinc": 0.91,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168871/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169702,
+      "name": "小米（生）",
+      "aliases": [
+        "生小米",
+        "小米"
+      ],
+      "category": "主食",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC169702",
+      "description": "Millet, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 378.0,
+        "protein": 11.02,
+        "fat": 4.22,
+        "carbs": 72.85
+      },
+      "nutrientsPer100g": {
+        "fiber": 8.5,
+        "calcium": 8.0,
+        "iron": 3.01,
+        "magnesium": 114.0,
+        "potassium": 195.0,
+        "sodium": 5.0,
+        "zinc": 1.68,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169702/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168914,
+      "name": "米粉（熟）",
+      "aliases": [
+        "熟米粉",
+        "熟米线"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "cooked",
+      "id": "FDC168914",
+      "description": "Rice noodles, cooked",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 108.0,
+        "protein": 1.79,
+        "fat": 0.2,
+        "carbs": 24.01
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.0,
+        "calcium": 4.0,
+        "iron": 0.14,
+        "magnesium": 3.0,
+        "potassium": 4.0,
+        "sodium": 19.0,
+        "zinc": 0.25,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168914/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169742,
+      "name": "米粉（干）",
+      "aliases": [
+        "干米粉",
+        "干米线"
+      ],
+      "category": "主食",
+      "state": "dry",
+      "method": "dry",
+      "id": "FDC169742",
+      "description": "Rice noodles, dry",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 364.0,
+        "protein": 5.95,
+        "fat": 0.56,
+        "carbs": 80.18
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.6,
+        "calcium": 18.0,
+        "iron": 0.7,
+        "magnesium": 12.0,
+        "potassium": 30.0,
+        "sodium": 182.0,
+        "zinc": 0.74,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169742/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170285,
+      "name": "珍珠大麦（熟）",
+      "aliases": [
+        "熟大麦",
+        "大麦饭"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "cooked",
+      "id": "FDC170285",
+      "description": "Barley, pearled, cooked",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 123.0,
+        "protein": 2.26,
+        "fat": 0.44,
+        "carbs": 28.22
+      },
+      "nutrientsPer100g": {
+        "fiber": 3.8,
+        "calcium": 11.0,
+        "iron": 1.33,
+        "magnesium": 22.0,
+        "potassium": 93.0,
+        "sodium": 3.0,
+        "zinc": 0.82,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170285/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170686,
+      "name": "荞麦粒（先烘烤后煮熟）",
+      "aliases": [
+        "熟荞麦粒"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "cooked",
+      "id": "FDC170686",
+      "description": "Buckwheat groats, roasted, cooked",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 92.0,
+        "protein": 3.38,
+        "fat": 0.62,
+        "carbs": 19.94
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.7,
+        "calcium": 7.0,
+        "iron": 0.8,
+        "magnesium": 51.0,
+        "potassium": 88.0,
+        "sodium": 4.0,
+        "zinc": 0.61,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170686/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168486,
+      "name": "芋头（熟，无盐；做法未细分）",
+      "aliases": [
+        "熟芋头"
+      ],
+      "category": "主食",
+      "state": "cooked",
+      "method": "cooked",
+      "id": "FDC168486",
+      "description": "Taro, cooked, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 142.0,
+        "protein": 0.52,
+        "fat": 0.11,
+        "carbs": 34.6
+      },
+      "nutrientsPer100g": {
+        "fiber": 5.1,
+        "calcium": 18.0,
+        "iron": 0.72,
+        "magnesium": 30.0,
+        "potassium": 484.0,
+        "sodium": 15.0,
+        "zinc": 0.27,
+        "vitaminC": 5.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168486/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170166,
+      "name": "中国栗子（煮或蒸）",
+      "aliases": [
+        "熟栗子",
+        "熟板栗"
+      ],
+      "category": "豆类坚果",
+      "state": "cooked",
+      "method": "boiled_or_steamed",
+      "id": "FDC170166",
+      "description": "Nuts, chestnuts, chinese, boiled and steamed",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 153.0,
+        "protein": 2.88,
+        "fat": 0.76,
+        "carbs": 33.64
+      },
+      "nutrientsPer100g": {
+        "fiber": null,
+        "calcium": 12.0,
+        "iron": 0.97,
+        "magnesium": 58.0,
+        "potassium": 306.0,
+        "sodium": 2.0,
+        "zinc": 0.6,
+        "vitaminC": 24.7
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170166/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168437,
+      "name": "香菇（熟，无盐；做法未细分）",
+      "aliases": [
+        "熟香菇"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "cooked",
+      "id": "FDC168437",
+      "description": "Mushrooms, shiitake, cooked, without salt",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 56.0,
+        "protein": 1.56,
+        "fat": 0.22,
+        "carbs": 14.39
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.1,
+        "calcium": 3.0,
+        "iron": 0.44,
+        "magnesium": 14.0,
+        "potassium": 117.0,
+        "sodium": 4.0,
+        "zinc": 1.33,
+        "vitaminC": 0.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168437/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169392,
+      "name": "芥蓝（熟；做法未细分）",
+      "aliases": [
+        "熟芥蓝"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "cooked",
+      "id": "FDC169392",
+      "description": "Broccoli, chinese, cooked",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 22.0,
+        "protein": 1.14,
+        "fat": 0.72,
+        "carbs": 3.81
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.5,
+        "calcium": 100.0,
+        "iron": 0.56,
+        "magnesium": 18.0,
+        "potassium": 261.0,
+        "sodium": 7.0,
+        "zinc": 0.39,
+        "vitaminC": 28.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169392/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168460,
+      "name": "黄豆芽（蒸熟）",
+      "aliases": [
+        "蒸黄豆芽"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "cooked",
+      "method": "steamed",
+      "id": "FDC168460",
+      "description": "Soybeans, mature seeds, sprouted, cooked, steamed",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 81.0,
+        "protein": 8.47,
+        "fat": 4.45,
+        "carbs": 6.53
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.8,
+        "calcium": 59.0,
+        "iron": 1.31,
+        "magnesium": 60.0,
+        "potassium": 355.0,
+        "sodium": 10.0,
+        "zinc": 1.04,
+        "vitaminC": 8.3
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168460/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171119,
+      "name": "鸡爪（水煮）",
+      "aliases": [
+        "水煮鸡爪",
+        "煮鸡爪"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC171119",
+      "description": "Chicken, feet, boiled",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 215.0,
+        "protein": 19.4,
+        "fat": 14.6,
+        "carbs": 0.2
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 88.0,
+        "iron": 0.91,
+        "magnesium": 5.0,
+        "potassium": 31.0,
+        "sodium": 67.0,
+        "zinc": 0.69,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171119/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174730,
+      "name": "牛肉（新西兰加工用牛肉，水煮）",
+      "aliases": [
+        "水煮新西兰牛肉"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC174730",
+      "description": "Beef, New Zealand, imported, manufacturing beef, cooked, boiled",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 126.0,
+        "protein": 24.21,
+        "fat": 3.26,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 6.0,
+        "iron": 1.78,
+        "magnesium": 16.0,
+        "potassium": 193.0,
+        "sodium": 32.0,
+        "zinc": 5.02,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174730/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173095,
+      "name": "牛肚（新西兰，水煮）",
+      "aliases": [
+        "水煮牛肚",
+        "煮牛肚"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC173095",
+      "description": "Beef, New Zealand, imported, variety meats and by-products, tripe cooked, boiled",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 103.0,
+        "protein": 19.0,
+        "fat": 2.98,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 158.0,
+        "iron": 3.72,
+        "magnesium": 24.0,
+        "potassium": 102.0,
+        "sodium": 40.0,
+        "zinc": 2.39,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173095/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174737,
+      "name": "牛舌（新西兰，水煮）",
+      "aliases": [
+        "水煮牛舌",
+        "煮牛舌"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "boiled",
+      "id": "FDC174737",
+      "description": "Beef, New Zealand, imported, variety meats and by-products, tongue, cooked, boiled",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 271.0,
+        "protein": 18.31,
+        "fat": 20.34,
+        "carbs": 3.68
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 5.0,
+        "iron": 2.52,
+        "magnesium": 17.0,
+        "potassium": 189.0,
+        "sodium": 57.0,
+        "zinc": 4.2,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174737/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168290,
+      "name": "猪蹄（小火煮）",
+      "aliases": [
+        "清煮猪蹄"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "simmered",
+      "id": "FDC168290",
+      "description": "Pork, fresh, variety meats and by-products, feet, cooked, simmered",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 238.0,
+        "protein": 21.94,
+        "fat": 16.05,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 0.0,
+        "iron": 0.98,
+        "magnesium": 5.0,
+        "potassium": 33.0,
+        "sodium": 73.0,
+        "zinc": 1.05,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168290/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168323,
+      "name": "猪肚（小火煮）",
+      "aliases": [
+        "清煮猪肚"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "simmered",
+      "id": "FDC168323",
+      "description": "Pork, fresh, variety meats and by-products, stomach, cooked, simmered",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 157.0,
+        "protein": 21.4,
+        "fat": 7.26,
+        "carbs": 0.09
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 15.0,
+        "iron": 1.23,
+        "magnesium": 15.0,
+        "potassium": 85.0,
+        "sodium": 40.0,
+        "zinc": 2.92,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168323/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172389,
+      "name": "鸡大腿（炖，去皮肉）",
+      "aliases": [
+        "炖鸡大腿"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "stewed",
+      "id": "FDC172389",
+      "description": "Chicken, broilers or fryers, thigh, meat only, cooked, stewed",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 195.0,
+        "protein": 25.0,
+        "fat": 9.79,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 11.0,
+        "iron": 1.42,
+        "magnesium": 21.0,
+        "potassium": 183.0,
+        "sodium": 75.0,
+        "zinc": 2.58,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172389/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171076,
+      "name": "鸡胸肉（炖，肉及皮）",
+      "aliases": [
+        "炖带皮鸡胸肉"
+      ],
+      "category": "肉蛋奶",
+      "state": "cooked",
+      "method": "stewed",
+      "id": "FDC171076",
+      "description": "Chicken, broilers or fryers, breast, meat and skin, cooked, stewed",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 184.0,
+        "protein": 27.39,
+        "fat": 7.42,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 13.0,
+        "iron": 0.92,
+        "magnesium": 22.0,
+        "potassium": 178.0,
+        "sodium": 62.0,
+        "zinc": 0.97,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171076/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171971,
+      "name": "虾（熟，湿热；可能含保水添加剂）",
+      "aliases": [
+        "熟虾仁"
+      ],
+      "category": "水产",
+      "state": "cooked",
+      "method": "moist_heat",
+      "id": "FDC171971",
+      "description": "Crustaceans, shrimp, mixed species, cooked, moist heat (may contain additives to retain moisture)",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 119.0,
+        "protein": 22.78,
+        "fat": 1.7,
+        "carbs": 1.52
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 91.0,
+        "iron": 0.32,
+        "magnesium": 37.0,
+        "potassium": 170.0,
+        "sodium": 947.0,
+        "zinc": 1.63,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171971/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 171975,
+      "name": "蛤蜊（熟，湿热）",
+      "aliases": [
+        "熟蛤蜊"
+      ],
+      "category": "水产",
+      "state": "cooked",
+      "method": "moist_heat",
+      "id": "FDC171975",
+      "description": "Mollusks, clam, mixed species, cooked, moist heat",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 148.0,
+        "protein": 25.55,
+        "fat": 1.95,
+        "carbs": 5.13
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 92.0,
+        "iron": 2.81,
+        "magnesium": 18.0,
+        "potassium": 628.0,
+        "sodium": 1202.0,
+        "zinc": 2.73,
+        "vitaminC": 22.1
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171975/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172010,
+      "name": "墨鱼（熟，湿热）",
+      "aliases": [
+        "熟墨鱼",
+        "熟乌贼"
+      ],
+      "category": "水产",
+      "state": "cooked",
+      "method": "moist_heat",
+      "id": "FDC172010",
+      "description": "Mollusks, cuttlefish, mixed species, cooked, moist heat",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 158.0,
+        "protein": 32.48,
+        "fat": 1.4,
+        "carbs": 1.64
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 180.0,
+        "iron": 10.84,
+        "magnesium": 60.0,
+        "potassium": 637.0,
+        "sodium": 744.0,
+        "zinc": 3.46,
+        "vitaminC": 8.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172010/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174249,
+      "name": "章鱼（熟，湿热）",
+      "aliases": [
+        "熟章鱼"
+      ],
+      "category": "水产",
+      "state": "cooked",
+      "method": "moist_heat",
+      "id": "FDC174249",
+      "description": "Mollusks, octopus, common, cooked, moist heat",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 164.0,
+        "protein": 29.82,
+        "fat": 2.08,
+        "carbs": 4.4
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 106.0,
+        "iron": 9.54,
+        "magnesium": 60.0,
+        "potassium": 630.0,
+        "sodium": 460.0,
+        "zinc": 3.36,
+        "vitaminC": 8.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174249/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174250,
+      "name": "太平洋牡蛎（熟，湿热）",
+      "aliases": [
+        "熟太平洋牡蛎"
+      ],
+      "category": "水产",
+      "state": "cooked",
+      "method": "moist_heat",
+      "id": "FDC174250",
+      "description": "Mollusks, oyster, Pacific, cooked, moist heat",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 163.0,
+        "protein": 18.9,
+        "fat": 4.6,
+        "carbs": 9.9
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 16.0,
+        "iron": 9.2,
+        "magnesium": 44.0,
+        "potassium": 302.0,
+        "sodium": 212.0,
+        "zinc": 33.24,
+        "vitaminC": 12.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174250/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174217,
+      "name": "蓝贻贝（熟，湿热）",
+      "aliases": [
+        "熟蓝贻贝"
+      ],
+      "category": "水产",
+      "state": "cooked",
+      "method": "moist_heat",
+      "id": "FDC174217",
+      "description": "Mollusks, mussel, blue, cooked, moist heat",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 172.0,
+        "protein": 23.8,
+        "fat": 4.48,
+        "carbs": 7.39
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 33.0,
+        "iron": 6.72,
+        "magnesium": 37.0,
+        "potassium": 268.0,
+        "sodium": 369.0,
+        "zinc": 2.67,
+        "vitaminC": 13.6
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174217/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174207,
+      "name": "野生小龙虾（熟，湿热）",
+      "aliases": [
+        "熟野生小龙虾"
+      ],
+      "category": "水产",
+      "state": "cooked",
+      "method": "moist_heat",
+      "id": "FDC174207",
+      "description": "Crustaceans, crayfish, mixed species, wild, cooked, moist heat",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 82.0,
+        "protein": 16.77,
+        "fat": 1.2,
+        "carbs": 0.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.0,
+        "calcium": 60.0,
+        "iron": 0.83,
+        "magnesium": 33.0,
+        "potassium": 296.0,
+        "sodium": 94.0,
+        "zinc": 1.76,
+        "vitaminC": 0.9
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174207/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 172449,
+      "name": "软豆腐（硫酸钙及氯化镁凝固，未经烹调）",
+      "aliases": [
+        "软豆腐",
+        "嫩豆腐"
+      ],
+      "category": "豆类坚果",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC172449",
+      "description": "Tofu, soft, prepared with calcium sulfate and magnesium chloride (nigari)",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 61.0,
+        "protein": 7.17,
+        "fat": 3.69,
+        "carbs": 1.18
+      },
+      "nutrientsPer100g": {
+        "fiber": 0.2,
+        "calcium": 111.0,
+        "iron": 1.11,
+        "magnesium": 27.0,
+        "potassium": 120.0,
+        "sodium": 8.0,
+        "zinc": 0.64,
+        "vitaminC": 0.2
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/172449/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169242,
+      "name": "鲜香菇（生）",
+      "aliases": [
+        "鲜香菇",
+        "生香菇"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC169242",
+      "description": "Mushrooms, shiitake, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 34.0,
+        "protein": 2.24,
+        "fat": 0.49,
+        "carbs": 6.79
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.5,
+        "calcium": 2.0,
+        "iron": 0.41,
+        "magnesium": 20.0,
+        "potassium": 304.0,
+        "sodium": 9.0,
+        "zinc": 1.03,
+        "vitaminC": null
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169242/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168436,
+      "name": "香菇（干）",
+      "aliases": [
+        "干香菇"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "dry",
+      "method": "dry",
+      "id": "FDC168436",
+      "description": "Mushrooms, shiitake, dried",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 296.0,
+        "protein": 9.58,
+        "fat": 0.99,
+        "carbs": 75.37
+      },
+      "nutrientsPer100g": {
+        "fiber": 11.5,
+        "calcium": 11.0,
+        "iron": 1.72,
+        "magnesium": 132.0,
+        "potassium": 1534.0,
+        "sodium": 13.0,
+        "zinc": 7.66,
+        "vitaminC": 3.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168436/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169382,
+      "name": "金针菇（生）",
+      "aliases": [
+        "生金针菇",
+        "金针菇"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC169382",
+      "description": "Mushrooms, enoki, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 37.0,
+        "protein": 2.66,
+        "fat": 0.29,
+        "carbs": 7.81
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.7,
+        "calcium": 0.0,
+        "iron": 1.15,
+        "magnesium": 16.0,
+        "potassium": 359.0,
+        "sodium": 3.0,
+        "zinc": 0.65,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169382/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168580,
+      "name": "平菇（生）",
+      "aliases": [
+        "生平菇",
+        "平菇"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC168580",
+      "description": "Mushrooms, oyster, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 33.0,
+        "protein": 3.31,
+        "fat": 0.41,
+        "carbs": 6.09
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.3,
+        "calcium": 3.0,
+        "iron": 1.33,
+        "magnesium": 18.0,
+        "potassium": 420.0,
+        "sodium": 18.0,
+        "zinc": 0.77,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168580/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 168457,
+      "name": "海带（生）",
+      "aliases": [
+        "生海带"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC168457",
+      "description": "Seaweed, kelp, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 43.0,
+        "protein": 1.68,
+        "fat": 0.56,
+        "carbs": 9.57
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.3,
+        "calcium": 168.0,
+        "iron": 2.85,
+        "magnesium": 121.0,
+        "potassium": 89.0,
+        "sodium": 233.0,
+        "zinc": 1.23,
+        "vitaminC": 3.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/168457/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169250,
+      "name": "莲藕（生）",
+      "aliases": [
+        "生莲藕"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC169250",
+      "description": "Lotus root, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 74.0,
+        "protein": 2.6,
+        "fat": 0.1,
+        "carbs": 17.23
+      },
+      "nutrientsPer100g": {
+        "fiber": 4.9,
+        "calcium": 45.0,
+        "iron": 1.16,
+        "magnesium": 23.0,
+        "potassium": 556.0,
+        "sodium": 40.0,
+        "zinc": 0.39,
+        "vitaminC": 44.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169250/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 169979,
+      "name": "大白菜（生）",
+      "aliases": [
+        "生大白菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC169979",
+      "description": "Cabbage, chinese (pe-tsai), raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 16.0,
+        "protein": 1.2,
+        "fat": 0.2,
+        "carbs": 3.23
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.2,
+        "calcium": 77.0,
+        "iron": 0.31,
+        "magnesium": 13.0,
+        "potassium": 238.0,
+        "sodium": 9.0,
+        "zinc": 0.23,
+        "vitaminC": 27.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169979/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170390,
+      "name": "小白菜（生）",
+      "aliases": [
+        "生小白菜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC170390",
+      "description": "Cabbage, chinese (pak-choi), raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 13.0,
+        "protein": 1.5,
+        "fat": 0.2,
+        "carbs": 2.18
+      },
+      "nutrientsPer100g": {
+        "fiber": 1.0,
+        "calcium": 105.0,
+        "iron": 0.8,
+        "magnesium": 19.0,
+        "potassium": 252.0,
+        "sodium": 65.0,
+        "zinc": 0.19,
+        "vitaminC": 45.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170390/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170069,
+      "name": "冬瓜（生）",
+      "aliases": [
+        "生冬瓜"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC170069",
+      "description": "Waxgourd, (chinese preserving melon), raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 13.0,
+        "protein": 0.4,
+        "fat": 0.2,
+        "carbs": 3.0
+      },
+      "nutrientsPer100g": {
+        "fiber": 2.9,
+        "calcium": 19.0,
+        "iron": 0.4,
+        "magnesium": 10.0,
+        "potassium": 6.0,
+        "sodium": 111.0,
+        "zinc": 0.61,
+        "vitaminC": 13.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170069/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170066,
+      "name": "荸荠（生）",
+      "aliases": [
+        "生荸荠",
+        "马蹄"
+      ],
+      "category": "蔬菜菌藻",
+      "state": "raw",
+      "method": "raw",
+      "id": "FDC170066",
+      "description": "Waterchestnuts, chinese, (matai), raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 97.0,
+        "protein": 1.4,
+        "fat": 0.1,
+        "carbs": 23.94
+      },
+      "nutrientsPer100g": {
+        "fiber": 3.0,
+        "calcium": 11.0,
+        "iron": 0.06,
+        "magnesium": 22.0,
+        "potassium": 584.0,
+        "sodium": 14.0,
+        "zinc": 0.5,
+        "vitaminC": 4.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170066/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 170149,
+      "name": "莲子（干）",
+      "aliases": [
+        "干莲子"
+      ],
+      "category": "豆类坚果",
+      "state": "dry",
+      "method": "dry",
+      "id": "FDC170149",
+      "description": "Seeds, lotus seeds, dried",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 332.0,
+        "protein": 15.41,
+        "fat": 1.97,
+        "carbs": 64.47
+      },
+      "nutrientsPer100g": {
+        "fiber": null,
+        "calcium": 163.0,
+        "iron": 3.53,
+        "magnesium": 210.0,
+        "potassium": 1368.0,
+        "sodium": 5.0,
+        "zinc": 1.05,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170149/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 174256,
+      "name": "绿豆（干，未煮）",
+      "aliases": [
+        "干绿豆"
+      ],
+      "category": "豆类坚果",
+      "state": "dry",
+      "method": "dry",
+      "id": "FDC174256",
+      "description": "Mung beans, mature seeds, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 347.0,
+        "protein": 23.86,
+        "fat": 1.15,
+        "carbs": 62.62
+      },
+      "nutrientsPer100g": {
+        "fiber": 16.3,
+        "calcium": 132.0,
+        "iron": 6.74,
+        "magnesium": 189.0,
+        "potassium": 1246.0,
+        "sodium": 15.0,
+        "zinc": 2.68,
+        "vitaminC": 4.8
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/174256/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    },
+    {
+      "fdc_id": 173727,
+      "name": "红小豆（干，未煮）",
+      "aliases": [
+        "干红小豆",
+        "干赤小豆"
+      ],
+      "category": "豆类坚果",
+      "state": "dry",
+      "method": "dry",
+      "id": "FDC173727",
+      "description": "Beans, adzuki, mature seeds, raw",
+      "publication_date": "2019-04-01",
+      "per100g": {
+        "kcal": 329.0,
+        "protein": 19.87,
+        "fat": 0.53,
+        "carbs": 62.9
+      },
+      "nutrientsPer100g": {
+        "fiber": 12.7,
+        "calcium": 66.0,
+        "iron": 4.98,
+        "magnesium": 127.0,
+        "potassium": 1254.0,
+        "sodium": 5.0,
+        "zinc": 5.04,
+        "vitaminC": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173727/nutrients",
+      "data_type": "SR Legacy",
+      "release": "2018-04"
+    }
+  ]
+}

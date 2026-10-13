@@ -1,0 +1,1 @@
+Tesseract language data, Apache License 2.0. Distributed by @tesseract.js-data, derived from tesseract-ocr/tessdata. https://github.com/naptha/tessdata https://github.com/tesseract-ocr/tessdata

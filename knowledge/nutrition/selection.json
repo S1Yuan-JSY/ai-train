@@ -1,0 +1,369 @@
+[
+  {
+    "fdc_id": 169757,
+    "name": "白米饭（熟，未强化，无盐）",
+    "aliases": [
+      "米饭",
+      "白米饭",
+      "熟米饭"
+    ],
+    "category": "主食",
+    "state": "cooked",
+    "method": "boiled"
+  },
+  {
+    "fdc_id": 169756,
+    "name": "白米（生，未强化）",
+    "aliases": [
+      "生米",
+      "大米",
+      "生大米"
+    ],
+    "category": "主食",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 169704,
+    "name": "糙米饭（熟）",
+    "aliases": [
+      "糙米饭",
+      "熟糙米"
+    ],
+    "category": "主食",
+    "state": "cooked",
+    "method": "boiled"
+  },
+  {
+    "fdc_id": 169703,
+    "name": "糙米（生）",
+    "aliases": [
+      "生糙米",
+      "糙米"
+    ],
+    "category": "主食",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 169705,
+    "name": "燕麦（干）",
+    "aliases": [
+      "燕麦",
+      "干燕麦"
+    ],
+    "category": "主食",
+    "state": "dry",
+    "method": "dry"
+  },
+  {
+    "fdc_id": 169737,
+    "name": "意大利面（熟，无盐）",
+    "aliases": [
+      "意大利面",
+      "意面",
+      "熟意面"
+    ],
+    "category": "主食",
+    "state": "cooked",
+    "method": "boiled"
+  },
+  {
+    "fdc_id": 172688,
+    "name": "全麦面包（商业制作）",
+    "aliases": [
+      "全麦面包"
+    ],
+    "category": "主食",
+    "state": "ready",
+    "method": "baked"
+  },
+  {
+    "fdc_id": 170440,
+    "name": "土豆（水煮，去皮，无盐）",
+    "aliases": [
+      "水煮土豆",
+      "煮土豆",
+      "土豆"
+    ],
+    "category": "主食",
+    "state": "cooked",
+    "method": "boiled"
+  },
+  {
+    "fdc_id": 168484,
+    "name": "红薯（水煮，去皮）",
+    "aliases": [
+      "水煮红薯",
+      "煮红薯",
+      "红薯",
+      "番薯"
+    ],
+    "category": "主食",
+    "state": "cooked",
+    "method": "boiled"
+  },
+  {
+    "fdc_id": 173612,
+    "name": "鸡小腿（烤，肉及皮）",
+    "aliases": [
+      "烤琵琶腿",
+      "烤鸡小腿",
+      "琵琶腿",
+      "鸡小腿"
+    ],
+    "category": "肉蛋奶",
+    "state": "cooked",
+    "method": "roasted"
+  },
+  {
+    "fdc_id": 173613,
+    "name": "鸡小腿（炖，肉及皮）",
+    "aliases": [
+      "炖鸡小腿",
+      "炖琵琶腿"
+    ],
+    "category": "肉蛋奶",
+    "state": "cooked",
+    "method": "stewed"
+  },
+  {
+    "fdc_id": 172373,
+    "name": "鸡小腿（生，肉及皮）",
+    "aliases": [
+      "生鸡小腿",
+      "生琵琶腿"
+    ],
+    "category": "肉蛋奶",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 171477,
+    "name": "鸡胸肉（烤，去皮肉）",
+    "aliases": [
+      "烤鸡胸肉",
+      "鸡胸肉"
+    ],
+    "category": "肉蛋奶",
+    "state": "cooked",
+    "method": "roasted"
+  },
+  {
+    "fdc_id": 171478,
+    "name": "鸡胸肉（炖，去皮肉）",
+    "aliases": [
+      "炖鸡胸肉"
+    ],
+    "category": "肉蛋奶",
+    "state": "cooked",
+    "method": "stewed"
+  },
+  {
+    "fdc_id": 173424,
+    "name": "鸡蛋（水煮，全蛋）",
+    "aliases": [
+      "水煮蛋",
+      "水煮鸡蛋",
+      "煮鸡蛋",
+      "鸡蛋"
+    ],
+    "category": "肉蛋奶",
+    "state": "cooked",
+    "method": "boiled"
+  },
+  {
+    "fdc_id": 172217,
+    "name": "全脂牛奶（脂肪3.25%，未额外强化维生素）",
+    "aliases": [
+      "全脂牛奶",
+      "牛奶"
+    ],
+    "category": "肉蛋奶",
+    "state": "ready",
+    "method": "ready"
+  },
+  {
+    "fdc_id": 171284,
+    "name": "原味全脂酸奶",
+    "aliases": [
+      "原味全脂酸奶",
+      "原味酸奶"
+    ],
+    "category": "肉蛋奶",
+    "state": "ready",
+    "method": "ready"
+  },
+  {
+    "fdc_id": 175167,
+    "name": "大西洋养殖三文鱼（生）",
+    "aliases": [
+      "生三文鱼",
+      "三文鱼刺身"
+    ],
+    "category": "肉蛋奶",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 175168,
+    "name": "大西洋养殖三文鱼（干热烹调）",
+    "aliases": [
+      "烤三文鱼",
+      "三文鱼"
+    ],
+    "category": "肉蛋奶",
+    "state": "cooked",
+    "method": "roasted"
+  },
+  {
+    "fdc_id": 169967,
+    "name": "西兰花（水煮，沥干，无盐）",
+    "aliases": [
+      "水煮西兰花",
+      "熟西兰花",
+      "西兰花"
+    ],
+    "category": "蔬果",
+    "state": "cooked",
+    "method": "boiled"
+  },
+  {
+    "fdc_id": 170457,
+    "name": "番茄（生）",
+    "aliases": [
+      "番茄",
+      "西红柿"
+    ],
+    "category": "蔬果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 168409,
+    "name": "黄瓜（生，带皮）",
+    "aliases": [
+      "黄瓜"
+    ],
+    "category": "蔬果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 170393,
+    "name": "胡萝卜（生）",
+    "aliases": [
+      "胡萝卜"
+    ],
+    "category": "蔬果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 168463,
+    "name": "菠菜（水煮，沥干，无盐）",
+    "aliases": [
+      "水煮菠菜",
+      "熟菠菜",
+      "菠菜"
+    ],
+    "category": "蔬果",
+    "state": "cooked",
+    "method": "boiled"
+  },
+  {
+    "fdc_id": 173944,
+    "name": "香蕉（生）",
+    "aliases": [
+      "香蕉"
+    ],
+    "category": "蔬果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 171688,
+    "name": "苹果（生，带皮）",
+    "aliases": [
+      "苹果"
+    ],
+    "category": "蔬果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 169097,
+    "name": "橙子（生）",
+    "aliases": [
+      "橙子",
+      "橙"
+    ],
+    "category": "蔬果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 167762,
+    "name": "草莓（生）",
+    "aliases": [
+      "草莓"
+    ],
+    "category": "蔬果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 172475,
+    "name": "硬豆腐（硫酸钙凝固，未经烹调）",
+    "aliases": [
+      "硬豆腐",
+      "北豆腐"
+    ],
+    "category": "豆类坚果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 172476,
+    "name": "普通豆腐（硫酸钙凝固，未经烹调）",
+    "aliases": [
+      "普通豆腐",
+      "豆腐"
+    ],
+    "category": "豆类坚果",
+    "state": "raw",
+    "method": "raw"
+  },
+  {
+    "fdc_id": 170158,
+    "name": "扁桃仁（干烤，无盐）",
+    "aliases": [
+      "扁桃仁",
+      "巴旦木"
+    ],
+    "category": "豆类坚果",
+    "state": "ready",
+    "method": "roasted"
+  },
+  {
+    "fdc_id": 173806,
+    "name": "花生（干烤，无盐）",
+    "aliases": [
+      "烤花生",
+      "花生"
+    ],
+    "category": "豆类坚果",
+    "state": "ready",
+    "method": "roasted"
+  },
+  {
+    "fdc_id": 171413,
+    "name": "橄榄油",
+    "aliases": [
+      "橄榄油"
+    ],
+    "category": "油脂",
+    "state": "ready",
+    "method": "ready"
+  }
+]

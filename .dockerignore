@@ -1,0 +1,14 @@
+**/.env
+**/.env.*
+**/*.sqlite3*
+**/__pycache__
+**/*.pyc
+.python-deps*
+.venv
+node_modules
+.git
+backend/data
+deploy/backups
+tests
+docs
+work

@@ -1,0 +1,25 @@
+{
+  "name": "ai-train",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python -m uvicorn backend.app:app --host 0.0.0.0 --port 8787 --env-file backend/.env --no-access-log",
+    "build": "node scripts/vendor_ocr.mjs && esbuild frontend/src/core.ts --bundle --format=esm --platform=browser --outfile=frontend/public/core.js",
+    "test": "tsx --test tests/frontend/*.test.ts tests/frontend/*.test.js",
+    "test:backend": "python -m unittest discover -s tests/backend -p test_*.py -v",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tesseract.js": "6.0.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@tesseract.js-data/chi_sim": "1.0.0",
+    "@tesseract.js-data/eng": "1.0.0",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2"
+  }
+}
