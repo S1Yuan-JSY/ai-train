@@ -30,6 +30,8 @@ class AnalyzedItem(StrictModel):
     protein_per100g: float = Field(ge=0, le=100)
     carbs_per100g: float = Field(ge=0, le=100)
     fat_per100g: float = Field(ge=0, le=100)
+    added_oil_per100g: float | None = Field(default=None, ge=0, le=100)
+    added_sugar_per100g: float | None = Field(default=None, ge=0, le=100)
     assumptions: list[str] = Field(min_length=1, max_length=8)
 
 
@@ -54,6 +56,8 @@ nutrient_candidates仅是相近食材参考，不是这道菜的匹配结果。�
 protein_per100g/carbs_per100g/fat_per100g单位均为每100g可食部分的克数，总和不超过100。
 对于无可靠匹配的炒、卤、炸、含糖或餐馆混合菜，按常见做法将合理的用油、糖和酱料贡献纳入营养估算，并在假设中说明估计依据及不确定性。不得声称用户实际吃了确定的油糖克数；若给出假设用量必须明确是估算。用户明确无油、无糖或给出实际用量时优先遵循。不要把烹饪油糖默认当成零，也不要在总成品重量之外重复计算已包含的配料重量。
 不要输出热量，程序用4/4/9计算模型估算热量。不能把估算标为精确值。'''
+
+ANALYZE_PROMPT += '''\n每项必须另外输出added_oil_per100g和added_sugar_per100g：成品每100g中估计的额外油和糖克数，无添加填0。它们已经包含在fat_per100g和carbs_per100g内，不可重复加算；不得大于对应的脂肪和碳水。只指烹饪额外添加，不包括食材本身的脂肪、乳糖或天然糖。界面将让用户核对修改这些估计，不能只写在assumptions中。'''
 
 
 def explicit_grams(raw_text):
@@ -119,6 +123,12 @@ class MealPipeline:
             else:
                 food=FoodData(name=original['name'],protein=item.protein_per100g,carbs=item.carbs_per100g,fat=item.fat_per100g,kcal=4*item.protein_per100g+4*item.carbs_per100g+9*item.fat_per100g,source='DeepSeek模型估算（非食物数据库核验）；热量按4/4/9换算')
                 estimate['assumptions'] = ['未可靠匹配整道食物；按描述及常见做法估算，非品牌或餐馆官方营养数据。', *item.assumptions[:7]]
+            if reference:
+                estimate.update(addedOilPer100g=0, addedSugarPer100g=0)
+            elif item.added_oil_per100g is not None and item.added_sugar_per100g is not None:
+                if item.added_oil_per100g > food.fat or item.added_sugar_per100g > food.carbs:
+                    raise ValueError('添加油糖不能超过对应营养总量')
+                estimate.update(addedOilPer100g=item.added_oil_per100g, addedSugarPer100g=item.added_sugar_per100g)
             rows.append({'food':food.model_dump(),'grams':grams,'estimate':estimate})
         return {'type':'meal_estimate','items':rows}
 

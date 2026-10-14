@@ -14,7 +14,7 @@ class MealTests(unittest.TestCase):
         extraction={'items':[{'name':'含糖西红柿炒蛋','raw_text':'100g含糖西红柿炒蛋','quantity':100,'unit':'g'},
                              {'name':'餐馆羊杂面','raw_text':'一份餐馆羊杂面','quantity':1,'unit':'份'}]}
         analysis={'items':[{'item_index':i,'grams':500,'portion_min':400,'portion_max':600,
-                           'protein_per100g':8,'carbs_per100g':15,'fat_per100g':7,
+                           'protein_per100g':8,'carbs_per100g':15,'fat_per100g':7,'added_oil_per100g':3,'added_sugar_per100g':2,
                            'assumptions':['按常见做法估计油糖，实际配方未知']} for i in range(2)]}
         candidate=match_meal('米饭')
         captured=[]
@@ -33,6 +33,8 @@ class MealTests(unittest.TestCase):
             self.assertEqual(row['estimate']['nutritionBasis'],'model')
             self.assertNotIn('sourceId',row['estimate'])
             self.assertEqual(row['food']['kcal'],155)
+            self.assertEqual(row['estimate']['addedOilPer100g'],3)
+            self.assertEqual(row['estimate']['addedSugarPer100g'],2)
             self.assertIn('非品牌或餐馆官方',row['estimate']['assumptions'][0])
 
     def test_tool_then_api_estimate_preserves_explicit_grams(self):
