@@ -60,3 +60,9 @@ python scripts/import_usda.py --archive /path/to/FoodData_Central_sr_legacy_food
 新增 nutrientsPer100g：fiber（g）；calcium、iron、magnesium、potassium、sodium、zinc、vitaminC（mg）。缺失值保留 null，页面显示“未提供”；原始CSV行覆盖所有这些字段。附加营养供查阅，今日合计仍汇总能量及三大营养素。
 
 搜索接口支持 category、method、offset、limit（默认12，最大50），返回 total 匹配数和 count 全库数。页面支持分类、形态筛选及上下页，默认水煮优先。数据更新后须重启已有后端进程，再刷新网页。
+
+### 混合饮食估算
+
+饮食分析采用参考数据与模型结合：可靠匹配的单一食物使用原始 USDA 营养值；炒菜、卤味、含糖菜品和餐馆混合菜未可靠匹配时，由模型参考相近食材与常见做法估算。候选食材不会被当作整道菜的官方匹配；无候选时仍可估算。
+
+模型估算会考虑常见油、糖、酱料、皮骨和汤汁处理，并展示假设。已明确的克数保持不变，按个或份描述的重量显示估计范围。餐馆名称不代表掌握其配方，结果不是该店官方营养数据，可在记录后按实际份量调整。

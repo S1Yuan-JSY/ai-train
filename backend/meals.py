@@ -46,11 +46,13 @@ raw_text必须是用户原文的精确连续片段。没给数量时quantity为n
 ANALYZE_PROMPT='''你是饮食估算分析器。接收由工具提取的食物列表，输出json，按item_index覆盖每个输入项恰好一次。
 格式：{"items":[{"item_index":0,"grams":200,"portion_min":200,"portion_max":200,"protein_per100g":2.6,"carbs_per100g":28,"fat_per100g":0.3,"assumptions":["米饭按熟重估算"]}]}。
 每项可能带nutrient_reference，来自程序检索的USDA条目。若有引用，按该条目的形态估计份量，并在假设中说明；营养值将由程序直接使用原始条目覆盖，不能修改或伪造来源。没有引用的营养值仅为模型估算。grams为可食部分重量，不含骨头。
+nutrient_candidates仅是相近食材参考，不是这道菜的匹配结果。无可靠匹配时结合原文、食材比例、生熟状态和烹饪方式自主估算，不要因为数据库没有该菜就拒绝，也不要直接用候选单一食材覆盖整道混合菜。候选不相关时忽略，没有候选时仍可用一般食物知识估算。
+餐馆或品牌菜品没有提供官方配方时，按常见同类菜估算，假设中明确“非该店官方营养数据”。去皮鸡腿不能按带皮处理，含糖炒蛋应考虑糖和炒制用油；羊杂面应综合面条、羊杂、汤及常见用油，说明是否按喝汤估计。
 用户明确克数由工具explicit_grams给出，必须保留该数值。个/碗等按常见份量估算，并给合理的portion_min/max。
 默认米饭按熟米饭；琵琶腿按鸡小腿，可食部分不含骨，未说明时默认带皮；西兰花默认熟的无额外油，说明这些假设。
 假设必须注明生熟、皮/骨处理、碗大小及未提供的烹饪和油/酱料影响；没有数量则给一个常见份量并明确说明数量未知。
 protein_per100g/carbs_per100g/fat_per100g单位均为每100g可食部分的克数，总和不超过100。
-额外用油和酱料若未知，不编造已摄入的油量；在假设中说明未计入及其可能影响。
+对于无可靠匹配的炒、卤、炸、含糖或餐馆混合菜，按常见做法将合理的用油、糖和酱料贡献纳入营养估算，并在假设中说明估计依据及不确定性。不得声称用户实际吃了确定的油糖克数；若给出假设用量必须明确是估算。用户明确无油、无糖或给出实际用量时优先遵循。不要把烹饪油糖默认当成零，也不要在总成品重量之外重复计算已包含的配料重量。
 不要输出热量，程序用4/4/9计算模型估算热量。不能把估算标为精确值。'''
 
 
@@ -89,6 +91,10 @@ class MealPipeline:
         for original in extracted['items']:
             evidence = await self.food_retriever.ainvoke({'text': original['raw_text']})
             original['nutrient_reference'] = evidence['selected']
+            original['nutrient_candidates'] = [
+                {key: row[key] for key in ('id', 'name', 'description', 'state', 'method', 'per100g') if key in row}
+                for row in evidence.get('candidates', [])[:4]
+            ] if not evidence['selected'] else []
         result=Analysis.model_validate(await self.analysis_chain.ainvoke({'payload':json.dumps(extracted,ensure_ascii=False)}))
         source=extracted['items']
         if sorted(item.item_index for item in result.items)!=list(range(len(source))):
@@ -112,6 +118,7 @@ class MealPipeline:
                 estimate['assumptions'] = [f"营养参照：{reference['name']}；未明确的形态按此参照，额外油/酱料未计入。", *item.assumptions[:7]]
             else:
                 food=FoodData(name=original['name'],protein=item.protein_per100g,carbs=item.carbs_per100g,fat=item.fat_per100g,kcal=4*item.protein_per100g+4*item.carbs_per100g+9*item.fat_per100g,source='DeepSeek模型估算（非食物数据库核验）；热量按4/4/9换算')
+                estimate['assumptions'] = ['未可靠匹配整道食物；按描述及常见做法估算，非品牌或餐馆官方营养数据。', *item.assumptions[:7]]
             rows.append({'food':food.model_dump(),'grams':grams,'estimate':estimate})
         return {'type':'meal_estimate','items':rows}
 
@@ -119,4 +126,4 @@ class MealPipeline:
 @lru_cache(maxsize=1)
 def get_meal_pipeline():
     # Several foods plus assumptions need more output than a one-action parser.
-    return MealPipeline(get_model(max_tokens=2400))
+    return MealPipeline(get_model(max_tokens=4096))

@@ -43,7 +43,15 @@ class Ask(StrictModel):
     message: str = Field(min_length=1, max_length=1000)
 
 
-Action = Annotated[Union[Weight, BodyFat, Start, Set, Food, Finish, Ask], Field(discriminator='type')]
+RecordAction = Annotated[Union[Weight, BodyFat, Start, Set, Food, Finish], Field(discriminator='type')]
+
+
+class Batch(StrictModel):
+    type: Literal['batch']
+    actions: list[RecordAction] = Field(min_length=1, max_length=100)
+
+
+Action = Annotated[Union[Weight, BodyFat, Start, Set, Food, Finish, Ask, Batch], Field(discriminator='type')]
 action_adapter = TypeAdapter(Action)
 
 

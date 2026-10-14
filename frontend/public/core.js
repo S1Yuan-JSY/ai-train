@@ -4116,14 +4116,18 @@ var ProfileSchema = external_exports.object({
   forbidden: external_exports.string().max(2e3).nullable()
 });
 var EstimateSchema = external_exports.object({ assumptions: external_exports.array(external_exports.string().min(1).max(200)).min(1).max(8), confidence: external_exports.enum(["\u4F4E", "\u4E2D"]), gramsEstimated: external_exports.boolean(), portionMin: external_exports.number().gt(0).max(1e4), portionMax: external_exports.number().gt(0).max(1e4), nutritionBasis: external_exports.enum(["database", "model"]).optional(), sourceId: external_exports.string().regex(/^FDC\d+$/).optional(), sourceUrl: external_exports.string().url().startsWith("https://fdc.nal.usda.gov/").optional(), matchedName: external_exports.string().max(100).optional(), sourceRelease: external_exports.string().max(40).optional() }).strict();
-var EstimatedMealItemSchema = external_exports.object({ food: external_exports.object({ name: external_exports.string().min(1).max(100), protein: external_exports.number().min(0).max(100), carbs: external_exports.number().min(0).max(100), fat: external_exports.number().min(0).max(100), kcal: external_exports.number().min(0).max(1e3), source: external_exports.string().min(1).max(500) }).strict().refine((f) => f.protein + f.carbs + f.fat <= 100.5), grams: external_exports.number().gt(0).max(1e4), estimate: EstimateSchema }).strict().refine((x) => x.estimate.portionMin <= x.grams && x.grams <= x.estimate.portionMax, "\u4EFD\u91CF\u4F30\u7B97\u8303\u56F4\u4E0D\u6B63\u786E");
-var ActionSchema = external_exports.discriminatedUnion("type", [
+var EstimatedMealItemSchema = external_exports.object({ food: external_exports.object({ name: external_exports.string().min(1).max(100), protein: external_exports.number().min(0).max(100), carbs: external_exports.number().min(0).max(100), fat: external_exports.number().min(0).max(100), kcal: external_exports.number().min(0).max(1e3), source: external_exports.string().min(1).max(500), label: LabelSourceSchema.nullish() }).strict().refine((f) => f.protein + f.carbs + f.fat <= 100.5), grams: external_exports.number().gt(0).max(1e4), estimate: EstimateSchema }).strict().refine((x) => x.estimate.portionMin <= x.grams && x.grams <= x.estimate.portionMax, "\u4EFD\u91CF\u4F30\u7B97\u8303\u56F4\u4E0D\u6B63\u786E");
+var RecordActionSchema = external_exports.discriminatedUnion("type", [
   external_exports.object({ type: external_exports.literal("weight"), value: external_exports.number().min(20).max(400) }).strict(),
   external_exports.object({ type: external_exports.literal("bodyfat"), value: external_exports.number().gt(0).lt(100) }).strict(),
   external_exports.object({ type: external_exports.literal("start"), day: external_exports.string().trim().min(1).max(40) }).strict(),
   external_exports.object({ type: external_exports.literal("set"), exercise: external_exports.string().trim().min(1).max(80), weight: external_exports.number().min(0).max(1e3), reps: external_exports.number().int().min(1).max(500).nullable() }).strict(),
   external_exports.object({ type: external_exports.literal("food"), name: external_exports.string().trim().min(1).max(100), grams: external_exports.number().gt(0).max(1e4) }).strict(),
-  external_exports.object({ type: external_exports.literal("finish") }).strict(),
+  external_exports.object({ type: external_exports.literal("finish") }).strict()
+]);
+var ActionSchema = external_exports.discriminatedUnion("type", [
+  ...RecordActionSchema.options,
+  external_exports.object({ type: external_exports.literal("batch"), actions: external_exports.array(RecordActionSchema).min(1).max(100) }).strict(),
   external_exports.object({ type: external_exports.literal("ask"), message: external_exports.string().min(1).max(1e3) }).strict(),
   external_exports.object({ type: external_exports.literal("training_query"), day: external_exports.string().nullable(), scope: external_exports.enum(["previous", "current"]) }).strict(),
   external_exports.object({ type: external_exports.literal("meal_estimate"), items: external_exports.array(EstimatedMealItemSchema).min(1).max(30) }).strict()
@@ -4203,6 +4207,17 @@ function applyAction(input, raw, id, now = /* @__PURE__ */ new Date()) {
   const a = ActionSchema.parse(raw);
   const base = rollover(input, now);
   if (base.processed.includes(id)) return { state: base, message: "\u8BE5\u8BF7\u6C42\u5DF2\u7ECF\u4FDD\u5B58\uFF0C\u672A\u91CD\u590D\u8BB0\u5F55\u3002" };
+  if (a.type === "batch") {
+    let next = base;
+    for (const [index, action] of a.actions.entries()) {
+      const childId = `${id}:${index}`;
+      const result = applyAction(next, action, childId, new Date(now.getTime() + index));
+      if (!result.state.processed.includes(childId)) return { state: input, message: `\u7B2C${index + 1}\u9879\uFF1A${result.message}\u6574\u6279\u5C1A\u672A\u4FDD\u5B58\u3002` };
+      next = result.state;
+    }
+    next.processed = [...base.processed, id];
+    return { state: next, message: `\u5DF2\u4FDD\u5B58 ${a.actions.length} \u9879\u8BB0\u5F55\uFF0C\u5176\u4E2D\u8BAD\u7EC3 ${a.actions.filter((x) => x.type === "set").length} \u7EC4\u3002` };
+  }
   const s = JSON.parse(JSON.stringify(base));
   const at = now.toISOString();
   let message = "";
@@ -4244,6 +4259,34 @@ function applyAction(input, raw, id, now = /* @__PURE__ */ new Date()) {
 function parseLocal(text, s) {
   const t = text.trim();
   let m;
+  const parts = t.split(/[；;\n]+|[，,](?=\s*(?:练.{1,5}日|结束训练|(?:今天)?体重|(?:第[一二三四五六七八九十\d]+组)|[^，,\d]{1,15}\s*\d+(?:\.\d+)?\s*(?:kg|公斤|千克)))/).map((x) => x.trim()).filter(Boolean);
+  if (parts.length > 1) {
+    const actions = [];
+    let context = structuredClone(s);
+    for (const part of parts) {
+      const action = parseLocal(part, context);
+      if (!action || action.type === "ask" || action.type === "training_query" || action.type === "meal_estimate") return null;
+      const items = action.type === "batch" ? action.actions : [action];
+      actions.push(...items);
+      if (actions.length > 100) return { type: "ask", message: "\u4E00\u6B21\u6700\u591A\u8BB0\u5F55100\u9879\uFF0C\u8BF7\u5206\u6279\u8F93\u5165\u3002" };
+      for (const item of items) {
+        if (item.type === "set") context.current = { day: context.current?.day ?? "\u5F85\u9009\u62E9", at: (/* @__PURE__ */ new Date()).toISOString(), sets: [...context.current?.sets ?? [], item] };
+        else if (item.type === "start") context.current = { day: item.day, at: (/* @__PURE__ */ new Date()).toISOString(), sets: [] };
+        else if (item.type === "finish") context.current = null;
+      }
+    }
+    return { type: "batch", actions };
+  }
+  if (/(?:[2-9]\d*|1\d+|[二两三四五六七八九十]+)\s*组/.test(t) && !/^第[二三四五六七八九十\d]+组/.test(t)) {
+    const repeated = t.match(/^(.+?)\s*(\d+(?:\.\d+)?)\s*(?:kg|公斤|千克)[，,\s]*(\d+)组[，,\s]*每组\s*(\d+)次[。！!]?$/i);
+    if (repeated) {
+      const count = Number(repeated[3]);
+      if (count > 100) return { type: "ask", message: "\u4E00\u6B21\u6700\u591A\u8BB0\u5F55100\u7EC4\uFF0C\u8BF7\u5206\u6279\u8F93\u5165\u3002" };
+      if (count > 0 && !/[\d，,；;]|总共|计划|打算|明天/.test(repeated[1])) return { type: "batch", actions: Array.from({ length: count }, () => ({ type: "set", exercise: repeated[1].trim(), weight: Number(repeated[2]), reps: Number(repeated[4]) })) };
+    }
+    return null;
+  }
+  if (/[；;\n]|(?:kg|公斤|千克).*?(?:kg|公斤|千克)/i.test(t)) return null;
   if (/上次|上一次|最近一次|本次|这次|当前训练/.test(t) && /练|训练|卧推|深蹲|做了|动作|记录/.test(t)) {
     const part = t.match(/胸|背|腿|肩|手臂|腹|全身/);
     return { type: "training_query", day: part ? `${part[0]}\u65E5` : null, scope: /本次|这次|当前训练/.test(t) ? "current" : "previous" };
@@ -4264,8 +4307,8 @@ function parseLocal(text, s) {
   if (m = t.match(/^(?:今天)?体脂(?:率)?(?:是|为)?\s*(\d+(?:\.\d+)?)\s*%?[。！!]?$/)) return { type: "bodyfat", value: Number(m[1]) };
   if (m = t.match(/^(?:开始)?练?(.{1,15})日$/)) return { type: "start", day: `${m[1]}\u65E5` };
   const setText = t.replace(/^(?:刚刚|刚)?(?:做了|做完了|完成了)?\s*/, "").replace(/[，,、]/g, " ").replace(/[。！!]$/, "").trim();
-  if (!/^第[二三四五六七八九十\d]+组/.test(setText) && /(?:\d+|[一二三四五六七八九十]+)组/.test(setText) && !/(?:^|\s|[^\d])(?:1|一)组/.test(setText)) return { type: "ask", message: "\u8BF7\u9010\u7EC4\u8BB0\u5F55\uFF0C\u4F8B\u5982\u201C\u4E00\u7EC4\u5367\u63A88\u6B2160kg\u201D\uFF1B\u591A\u7EC4\u6570\u636E\u8BF7\u5206\u522B\u8F93\u5165\uFF0C\u907F\u514D\u731C\u6D4B\u6BCF\u7EC4\u6B21\u6570\u548C\u91CD\u91CF\u3002" };
   const patterns = [/^(?:1|一)组\s*(.+?)\s*(\d+)次\s*(\d+(?:\.\d+)?)\s*(?:kg|公斤|千克)$/i, /^(.+?)\s*(?:1|一)组\s*(\d+)次\s*(\d+(?:\.\d+)?)\s*(?:kg|公斤|千克)$/i, /^(.+?)\s*(\d+)次\s*(\d+(?:\.\d+)?)\s*(?:kg|公斤|千克)$/i];
+  if ((m = setText.match(/^([^\d，,；;]+?)\s*(\d+(?:\.\d+)?)\s*(?:kg|公斤|千克)\s*(\d+)次$/i)) && !/组|计划|明天|打算/.test(m[1])) return { type: "set", exercise: m[1].trim(), weight: Number(m[2]), reps: Number(m[3]) };
   for (const pattern of patterns) {
     const found = setText.match(pattern);
     if (found) return { type: "set", exercise: found[1].trim(), reps: Number(found[2]), weight: Number(found[3]) };
