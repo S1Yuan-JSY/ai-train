@@ -71,6 +71,17 @@ def explicit_grams(raw_text):
     return result
 
 
+def explicit_single_food(text):
+    # Only complete, affirmative single-item statements with known food names.
+    # Questions, plans, negations and multiple foods still require extraction.
+    match = re.fullmatch(r'(?:我)?(?:今天)?(?:吃了|喝了)\s*((\d+(?:\.\d+)?)\s*(g|克|kg|公斤|千克)\s*(蛋白粉|乳清蛋白粉|分离乳清蛋白粉|米饭|熟米饭|鸡蛋|西兰花))[。！!]?\s*', text.strip(), re.I)
+    if not match:
+        return None
+    raw, quantity, unit, name = match.groups()
+    return {'items': [{'name': name, 'raw_text': raw, 'quantity': float(quantity),
+                       'unit': unit, 'item_index': 0, 'explicit_grams': explicit_grams(raw)}]}
+
+
 class MealPipeline:
     def __init__(self, model, food_retriever=retrieve_food_nutrients):
         self.food_retriever = food_retriever
@@ -91,7 +102,9 @@ class MealPipeline:
         self.extract_meal_items=extract_meal_items
 
     async def ainvoke(self,text):
-        extracted=await self.extract_meal_items.ainvoke({'text':text})
+        extracted=explicit_single_food(text)
+        if extracted is None:
+            extracted=await self.extract_meal_items.ainvoke({'text':text})
         for original in extracted['items']:
             evidence = await self.food_retriever.ainvoke({'text': original['raw_text']})
             original['nutrient_reference'] = evidence['selected']

@@ -42,6 +42,6 @@ export function createMealReview(action,{save,cancel,guard}){
   for(const input of [grams.input,oil.input,sugar.input])input.addEventListener('input',refresh);
   refresh();editors.push(read);host.append(panel);
  }
- const controls=document.createElement('div');controls.className='actions';const confirm=document.createElement('button');confirm.type='button';confirm.className='primary';confirm.textContent='核对完成，保存这一餐';confirm.onclick=()=>guard(async()=>{await save({type:'meal_estimate',items:editors.map(read)});});
+ const controls=document.createElement('div');controls.className='actions';const confirm=document.createElement('button');confirm.type='button';confirm.className='primary';confirm.textContent='核对完成，保存这一餐';confirm.onclick=()=>guard(async()=>{await save({type:'meal_estimate',items:editors.map(read => read())});});
  const abort=document.createElement('button');abort.type='button';abort.textContent='取消，不保存';abort.onclick=()=>cancel();controls.append(confirm,abort);host.append(controls);return host;
 }

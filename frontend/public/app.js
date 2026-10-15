@@ -1,4 +1,4 @@
-import {createMealReview} from './meal-review.js?v=20261014-review';
+import {createMealReview} from './meal-review.js?v=20261015-save-fix';
 import {renderCoachMarkdown} from './coach-format.js?v=20261013-coach';
 import {initLabelPanel} from './label.js?v=20261011-camera';
 import {emptyState,ProfileSchema,FoodSchema,ActionSchema,applyAction,parseLocal,metabolism,totals,rollover,localDay,findTraining,saveTrainingPlan,removeTrainingPlan,trainingDate,labelFood,labelExtras,parseLabelText} from './core.js?v=20261014-review';
