@@ -1,4 +1,4 @@
-import {renderNutritionTargets} from './nutrition-targets.js?v=20261104-ratios';
+import {renderNutritionTargets,targetsFromRatios} from './nutrition-targets.js?v=20261104-inline';
 import {createMealReview} from './meal-review.js?v=20261015-save-fix';
 import {renderCoachMarkdown} from './coach-format.js?v=20261013-coach';
 import {initLabelPanel} from './label.js?v=20261104-ocr';
@@ -67,8 +67,9 @@ function render(){
  renderCalendar();
  const todaySchedule=(state.schedules??[]).find(x=>x.date===localDay());
  $('today-plan').innerHTML=`<span class="plan-dot"></span><div><strong>${todaySchedule?`今日计划 · ${esc(todaySchedule.day)}`:'今天，由你安排'}</strong><p>${todaySchedule?`${esc(todaySchedule.time)} 开始 · ${todaySchedule.duration}分钟 · ${esc(todaySchedule.notes||'按计划稳步完成')}`:'在下方日历选择训练部位与时间，也可以直接开始记录。'}</p></div>`;
- $('nutrition-summary').innerHTML=`<div class="nutrition-metrics">${[['能量',total.kcal,'kcal'],['蛋白质',total.protein,'g'],['碳水',total.carbs,'g'],['脂肪',total.fat,'g']].map(([name,value,unit])=>`<div><span>${name}</span><strong>${Number(value).toFixed(name==='能量'?0:1)}<small>${unit}</small></strong></div>`).join('')}</div>`;
- renderNutritionTargets($('nutrition-ratios'),state.nutritionRatios,state.profile?.weight,total,value=>guarded(async()=>{const next=structuredClone(rollover(state));next.nutritionRatios=value;next.nutritionTargets=null;await persist(next,'长期饮食系数已保存，随档案体重自动换算。');}),()=>guarded(async()=>{const next=structuredClone(rollover(state));next.nutritionRatios=null;next.nutritionTargets=null;await persist(next,'已清除饮食系数。');}),$('nutrition-targets'));
+ const macroTargets=targetsFromRatios(state.nutritionRatios,state.profile?.weight);
+ $('nutrition-summary').innerHTML=`<div class="nutrition-metrics">${[['能量',total.kcal,'kcal',null],['蛋白质',total.protein,'g','protein'],['碳水',total.carbs,'g','carbs'],['脂肪',total.fat,'g','fat']].map(([name,value,unit,key])=>`<div><span>${name}${key&&macroTargets?`<small class="macro-target" title="按档案体重与长期系数计算的目标">（${Number(macroTargets[key].toFixed(1))}g）</small>`:''}</span><strong>${Number(value).toFixed(name==='能量'?0:1)}<small>${unit}</small></strong></div>`).join('')}</div>`;
+ renderNutritionTargets($('nutrition-ratios'),state.nutritionRatios,state.profile?.weight,total,value=>guarded(async()=>{const next=structuredClone(rollover(state));next.nutritionRatios=value;next.nutritionTargets=null;await persist(next,'长期饮食系数已保存，随档案体重自动换算。');}),()=>guarded(async()=>{const next=structuredClone(rollover(state));next.nutritionRatios=null;next.nutritionTargets=null;await persist(next,'已清除饮食系数。');}));
  const hasEstimate=d.rows.some(r=>r.estimate);
  $('diet-table').innerHTML=table(['食物','份量g','蛋白g','碳水g','脂肪g','kcal'],d.rows.map(r=>[r.food.name,r.estimate?`${r.grams}${r.estimate.gramsEstimated?'（估）':'（明确）'}`:r.grams,...[r.food.protein,r.food.carbs,r.food.fat,r.food.kcal].map(v=>`${r.estimate?'≈':''}${(v*r.grams/100).toFixed(r.food.label?2:1)}`)]))+`<p class="summary">${hasEstimate?'估算合计':'合计'} ${total.kcal.toFixed(0)} kcal · 蛋白 ${total.protein.toFixed(1)}g · 碳水 ${total.carbs.toFixed(1)}g · 脂肪 ${total.fat.toFixed(1)}g</p><p class="muted">仅汇总已记录食物。官方条目是参考值，模型估算另行标识；份量范围不包含烹饪和配方的全部不确定性。往日记录按日期保存并折叠，可在下方展开查看。</p>`;
  d.rows.forEach((r,i)=>{const row=document.createElement('div');row.className='meal-row';const text=document.createElement('p');text.className='muted';text.textContent=`${r.food.name}${r.estimate?.gramsEstimated?`，可食部分估算范围 ${r.estimate.portionMin}–${r.estimate.portionMax}g`:''}。来源：${r.food.source}`;row.append(text);
