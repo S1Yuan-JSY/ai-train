@@ -34,6 +34,10 @@ def build_chain(model):
     return prompt | model | JsonOutputParser() | validate
 
 
+def personal_model(config, max_tokens=4096, timeout=25):
+    return ChatDeepSeek(model=config['model'], api_key=config['api_key'], api_base=config['api_base'], temperature=0, max_tokens=max_tokens, timeout=timeout, max_retries=0)
+
+
 @lru_cache(maxsize=4)
 def get_model(max_tokens=4096):
     key = os.getenv('DEEPSEEK_API_KEY', '').strip()

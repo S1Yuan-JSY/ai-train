@@ -267,3 +267,5 @@ ai-train/
 - [服务器部署、迁移与备份](deploy/README.md)
 
 训练知识文档来自 `fitness-agent-main`，保留其 [MIT 许可证与版权说明](knowledge/fitness/LICENSE)。OCR 第三方许可随资源保存在 `frontend/public/vendor/ocr/`；这些许可分别适用于对应材料，不代表整个项目统一采用该许可证。
+
+个人模型配置与备份说明：[PERSONAL-MODELS.md](docs/PERSONAL-MODELS.md)。

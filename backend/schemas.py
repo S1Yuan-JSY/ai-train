@@ -1,3 +1,4 @@
+from pydantic import SecretStr
 from typing import Annotated, Literal, Union
 from pydantic import BaseModel, ConfigDict, Field, TypeAdapter, model_validator, field_validator
 
@@ -180,6 +181,12 @@ class DailyArchive(StrictModel):
     trainings: list[Training]
 
 
+class NutritionTargets(StrictModel):
+    protein: float = Field(gt=0, le=1000)
+    carbs: float = Field(gt=0, le=2000)
+    fat: float = Field(gt=0, le=1000)
+
+
 class MemoryState(StrictModel):
     version: Literal[1]
     profile: Profile | None
@@ -190,6 +197,7 @@ class MemoryState(StrictModel):
     schedules: list[TrainingPlan] = Field(default_factory=list, max_length=2000)
     foods: list[FoodData]
     diet: Diet
+    nutritionTargets: NutritionTargets | None = None
     processed: list[str]
     archives: dict[str, DailyArchive] = Field(default_factory=dict)
 
@@ -219,7 +227,20 @@ class Credentials(StrictModel):
     password: str = Field(min_length=10, max_length=128)
 
 
-class Registration(Credentials):
+class PersonalModel(StrictModel):
+    model_name: str = Field(pattern=r'^[a-zA-Z0-9][a-zA-Z0-9._:/-]{0,99}$')
+    api_key: SecretStr = Field(min_length=10, max_length=512)
+
+    @field_validator('api_key')
+    @classmethod
+    def valid_api_key(cls, value):
+        key=value.get_secret_value()
+        if not key.isascii() or any(c.isspace() for c in key):
+            raise ValueError('API Key不能包含空白或非ASCII字符')
+        return value
+
+
+class Registration(Credentials, PersonalModel):
     # Accept the retired field from cached clients; registration no longer requires it.
     invite_token: str | None = Field(default=None, max_length=256)
 

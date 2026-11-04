@@ -26,7 +26,7 @@ class LabelArchiveTests(unittest.TestCase):
                 access_token='test-label-invite', database_path=Path(tmp)/'memory.sqlite3')) as client:
             for username in ['label_user_a', 'label_user_b']:
                 self.assertEqual(client.post('/auth/register', json=dict(username=username,
-                    password='test-label-password', invite_token='test-label-invite')).status_code,200)
+                    password='test-label-password', model_name='test-model', api_key='test-personal-key', invite_token='test-label-invite')).status_code,200)
                 if username.endswith('a'):
                     state = self.state()
                     self.assertEqual(client.put('/memory', json=dict(revision=0,state=state)).status_code,200)

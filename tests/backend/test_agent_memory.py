@@ -57,7 +57,7 @@ class AccountMemoryTests(unittest.TestCase):
         self.uid = self.register(self.client, 'alice')['user']['id']
 
     def register(self, client, username):
-        result = client.post('/auth/register', json={'username': username, 'password': 'long-test-password'})
+        result = client.post('/auth/register', json={'username': username, 'password': 'long-test-password', 'model_name':'test-model','api_key':'test-personal-key'})
         self.assertEqual(result.status_code, 200, result.text)
         self.assertIn('HttpOnly', result.headers['set-cookie'])
         return result.json()

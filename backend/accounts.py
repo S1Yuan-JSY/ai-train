@@ -35,11 +35,14 @@ class Accounts:
     def password_hash(password, salt):
         return hashlib.scrypt(password.encode(), salt=bytes.fromhex(salt), n=16384, r=8, p=1).hex()
 
-    def register(self, username, password):
+    def register(self, username, password, personal=None):
         uid, salt = secrets.token_hex(16), secrets.token_hex(16)
         digest = self.password_hash(password, salt)
         with self.connect() as db:
             db.execute('INSERT INTO users VALUES(?,?,?,?)', (uid, username, salt, digest))
+            if personal is not None:
+                model,encrypt,key=personal
+                db.execute("INSERT INTO model_accounts VALUES(?,'personal',?,?)",(uid,model,encrypt(uid,key)))
         return uid
 
     def login(self, username, password):

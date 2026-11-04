@@ -14,9 +14,9 @@ def meal_error(exc):
         return 503, str(exc) + suffix
     if isinstance(exc, APIStatusError):
         messages = {
-            401: 'DeepSeek 密钥无效或已失效，请更新 backend/.env 中的 DEEPSEEK_API_KEY 后重启服务。',
+            401: 'DeepSeek 密钥无效或已失效。个人API账号请在设置页更新密钥；已有站点API账号请联系管理员。',
             402: 'DeepSeek 账户余额不足，请检查账户余额后重试。',
-            404: 'DeepSeek 模型或接口地址不可用，请检查 DEEPSEEK_MODEL 和 DEEPSEEK_BASE_URL 后重启服务。',
+            404: 'DeepSeek 模型或接口地址不可用。个人API账号请在设置页检查模型名称；已有站点API账号请联系管理员。',
             503: '模型服务当前繁忙，请稍后重试；也可从食物库选择或按包装标签记录。',
             429: 'DeepSeek 请求过于频繁或额度受限，请稍后重试。',
         }

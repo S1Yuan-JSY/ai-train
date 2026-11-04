@@ -12,11 +12,14 @@ from pydantic import BaseModel, Field, ConfigDict
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
-from .chain import get_chain, parse_record
+from .chain import get_chain, parse_record, build_chain, personal_model
 from .schemas import ParseRequest, MemoryRequest
-from .meals import get_meal_pipeline
+from .meals import get_meal_pipeline, MealPipeline
 from .model_errors import meal_error, ModelConfigurationError
 from .accounts import Accounts, SESSION_SECONDS
+from .model_accounts import ModelAccounts
+from .schemas import PersonalModel
+from fastapi.exceptions import RequestValidationError
 from .agent_memory import runtime_memory
 from .schemas import Credentials, Registration, ChatRequest, PreferenceRequest, LegacyImport
 from .food_rag import catalog, search_foods, portion_action
@@ -48,6 +51,12 @@ def create_app(chain=None, access_token=None, database_path=None, meal_pipeline=
     token = access_token or os.getenv('APP_ACCESS_TOKEN', '')
     path = Path(database_path or os.getenv('MEMORY_DB', str(Path(__file__).parent / 'data' / 'memory.sqlite3')))
     accounts = Accounts(path)
+    model_accounts = ModelAccounts(accounts)
+
+    @app.exception_handler(RequestValidationError)
+    async def validation_error(request, exc):
+        # Never echo submitted passwords or API keys from validation errors.
+        return JSONResponse(status_code=422, content={"detail":[{"loc":e["loc"],"msg":e["msg"],"type":e["type"]} for e in exc.errors()]})
     public_origin = os.getenv('PUBLIC_ORIGIN', '').strip().rstrip('/')
     if os.getenv('APP_ENV') == 'production':
         from urllib.parse import urlsplit
@@ -118,7 +127,7 @@ def create_app(chain=None, access_token=None, database_path=None, meal_pipeline=
     def register(body: Registration, request: Request, response: Response):
         rate_limit(request)
         try:
-            uid = accounts.register(body.username, body.password)
+            uid = accounts.register(body.username, body.password, (body.model_name, model_accounts.encrypt, body.api_key.get_secret_value()))
         except sqlite3.IntegrityError:
             raise HTTPException(409, '用户名已存在')
         set_session(response, uid)
@@ -135,7 +144,15 @@ def create_app(chain=None, access_token=None, database_path=None, meal_pipeline=
 
     @app.get('/auth/me')
     def me(user=Depends(auth)):
-        return {'user': user, 'agent_memory': app.state.agent_memory is not None, 'semantic_search': bool(app.state.agent_memory and app.state.agent_memory.semantic)}
+        return {'user': user, 'agent_memory': app.state.agent_memory is not None, 'semantic_search': bool(app.state.agent_memory and app.state.agent_memory.semantic), 'model_config': model_accounts.public(user['id'])}
+
+    @app.put('/account/model')
+    def update_model(body: PersonalModel, user=Depends(account_user)):
+        try:
+            model_accounts.update(user['id'], body.model_name, body.api_key.get_secret_value())
+        except ValueError as exc:
+            raise HTTPException(400, str(exc))
+        return {'ok':True, 'model_config':model_accounts.public(user['id'])}
 
     @app.post('/auth/logout')
     def logout(request: Request, response: Response):
@@ -162,9 +179,11 @@ def create_app(chain=None, access_token=None, database_path=None, meal_pipeline=
         return {'ok': True, 'framework': 'LangChain'}
 
     @app.post('/parse', dependencies=[Depends(auth)])
-    async def parse(request: ParseRequest):
+    async def parse(request: ParseRequest, user=Depends(auth)):
         try:
-            action = await asyncio.wait_for(parse_record(chain or get_chain(), request), timeout=28)
+            config = model_accounts.resolve(user['id'])
+            selected = chain or (build_chain(personal_model(config).bind(response_format={'type':'json_object'})) if config else get_chain())
+            action = await asyncio.wait_for(parse_record(selected, request), timeout=28)
             return {'action': action}
         except ModelConfigurationError as exc:
             return JSONResponse(status_code=503, content={'error': str(exc)})
@@ -196,9 +215,11 @@ def create_app(chain=None, access_token=None, database_path=None, meal_pipeline=
         return {'action': portion_action(row, body.grams)}
 
     @app.post('/meal/analyze', dependencies=[Depends(auth)])
-    async def analyze_meal(request: ParseRequest):
+    async def analyze_meal(request: ParseRequest, user=Depends(auth)):
         try:
-            action=await asyncio.wait_for((meal_pipeline or get_meal_pipeline()).ainvoke(request.text), timeout=55)
+            config = model_accounts.resolve(user['id'])
+            selected = meal_pipeline or (MealPipeline(personal_model(config).bind(response_format={'type':'json_object'})) if config else get_meal_pipeline())
+            action=await asyncio.wait_for(selected.ainvoke(request.text), timeout=55)
             return {'action':action}
         except Exception as exc:
             status, message = meal_error(exc)
@@ -279,7 +300,7 @@ def create_app(chain=None, access_token=None, database_path=None, meal_pipeline=
             except sqlite3.IntegrityError:
                 raise HTTPException(409, '该会话正在回答，请稍后再试')
         try:
-            result = await asyncio.wait_for(service.chat(uid, thread, body.text, load_state(uid)['state']), timeout=85)
+            result = await asyncio.wait_for(service.chat(uid, thread, body.text, load_state(uid)['state'], model_config=model_accounts.resolve(uid)), timeout=85)
             with accounts.connect() as db:
                 db.execute('CREATE TABLE IF NOT EXISTS chat_sources(thread TEXT,message TEXT,sources TEXT,PRIMARY KEY(thread,message))')
                 db.execute('INSERT OR REPLACE INTO chat_sources VALUES(?,?,?)', (thread,result.get('message_id',''),json.dumps(result.get('sources',[]),ensure_ascii=False)))

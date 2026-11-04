@@ -95,7 +95,7 @@ class FoodRAGTests(unittest.TestCase):
         config={'APP_ENV':'production','PUBLIC_ORIGIN':'https://fitness.example.com','COOKIE_SECURE':'true','ENABLE_LEGACY_TOKEN':'false','POSTGRES_URI':'','APP_ACCESS_TOKEN':''}
         with tempfile.TemporaryDirectory() as temp, patch.dict(os.environ,config):
             with TestClient(create_app(access_token='',database_path=Path(temp)/'memory.sqlite3'),base_url='https://fitness.example.com') as client:
-                payload={'username':'deploytest','password':'long-test-password'}
+                payload={'username':'deploytest','password':'long-test-password','model_name':'test-model','api_key':'test-personal-key'}
                 self.assertEqual(client.post('/auth/register',headers={'Origin':'https://evil.example'},json=payload).status_code,403)
                 response=client.post('/auth/register',headers={'Origin':'https://fitness.example.com'},json=payload)
                 self.assertEqual(response.status_code,200)
