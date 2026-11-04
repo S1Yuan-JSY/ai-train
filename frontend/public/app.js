@@ -1,3 +1,4 @@
+import {simplifyLayout} from './layout.js?v=20261104-refine';
 import {renderNutritionTargets,targetsFromRatios} from './nutrition-targets.js?v=20261104-inline';
 import {createMealReview} from './meal-review.js?v=20261015-save-fix';
 import {renderCoachMarkdown} from './coach-format.js?v=20261013-coach';
@@ -182,3 +183,6 @@ resetLabel=initLabelPanel({isConnected:()=>connected,save:async(row,remember)=>{
  if(busy)throw new Error('另一条记录正在保存，请稍后重试。');lock(true);
  try{const next=structuredClone(rollover(state));next.diet.rows.push(row);if(remember)next.foods=[...next.foods.filter(f=>f.name!==row.food.name),row.food];await persist(next,'包装标签营养已按克换算并保存。');}finally{lock(false);}
 }});
+
+// Keep secondary tools accessible without crowding the primary flow.
+simplifyLayout();
