@@ -187,6 +187,12 @@ class NutritionTargets(StrictModel):
     fat: float = Field(gt=0, le=1000)
 
 
+class NutritionRatios(StrictModel):
+    protein: float = Field(gt=0, le=10)
+    carbs: float = Field(gt=0, le=20)
+    fat: float = Field(gt=0, le=10)
+
+
 class MemoryState(StrictModel):
     version: Literal[1]
     profile: Profile | None
@@ -198,6 +204,7 @@ class MemoryState(StrictModel):
     foods: list[FoodData]
     diet: Diet
     nutritionTargets: NutritionTargets | None = None
+    nutritionRatios: NutritionRatios | None = None
     processed: list[str]
     archives: dict[str, DailyArchive] = Field(default_factory=dict)
 
