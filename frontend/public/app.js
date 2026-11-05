@@ -1,4 +1,4 @@
-import {simplifyLayout} from './layout.js?v=20261104-refine';
+import {simplifyLayout} from './layout.js?v=20261105-nav';
 import {renderNutritionTargets,targetsFromRatios} from './nutrition-targets.js?v=20261104-inline';
 import {createMealReview} from './meal-review.js?v=20261015-save-fix';
 import {renderCoachMarkdown} from './coach-format.js?v=20261013-coach';

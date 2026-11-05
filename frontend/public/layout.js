@@ -9,9 +9,9 @@ export function simplifyLayout(){
  fold($('training-history').closest('.card'),'训练历史');
  fold($('diet-history').closest('.card'),'往日饮食');
  fold($('label-panel'),'拍摄营养标签');
- fold(document.querySelector('.reference-library'),'搜索食物参考库');
+ fold(document.querySelector('.reference-library'),'饮食参考匹配 · 展开搜索');
  const record=$('message').closest('.card');$('record-status').after(record);
- const nutrition=$('nutrition-summary').closest('.card');$('meal-form').before(nutrition);
+ const nutrition=$('nutrition-summary').closest('.card');$('diet').prepend($('meal-form'));$('meal-form').after($('meal-review'));$('meal-review').after(nutrition);document.querySelector('#diet .section-intro').hidden=true;
  for(const [id,title,subtitle] of [['record','训练记录','专注当下这一组。'],['profile','个人档案','身体、目标与长期饮食设置。'],['settings','账号设置','管理账号、模型与数据。']]){
   const heading=document.createElement('div');heading.className='page-heading';const h=document.createElement('h2');h.textContent=title;const p=document.createElement('p');p.textContent=subtitle;heading.append(h,p);$(id).prepend(heading);
  }
