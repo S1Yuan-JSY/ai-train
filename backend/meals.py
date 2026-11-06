@@ -5,7 +5,8 @@ from langchain_core.messages import SystemMessage
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.tools import tool
-from pydantic import Field
+from pydantic import Field, ValidationError
+from langchain_core.exceptions import OutputParserException
 from .schemas import StrictModel, FoodData
 from .chain import get_model
 from .food_rag import retrieve_food_nutrients, source_text
@@ -82,6 +83,16 @@ def explicit_single_food(text):
                        'unit': unit, 'item_index': 0, 'explicit_grams': explicit_grams(raw)}]}
 
 
+async def validated_output(chain, payload, schema):
+    # Retry malformed structured output once; never save an unvalidated result.
+    for attempt in range(2):
+        try:
+            return schema.model_validate(await chain.ainvoke(payload))
+        except (ValidationError, OutputParserException):
+            if attempt:
+                raise
+
+
 class MealPipeline:
     def __init__(self, model, food_retriever=retrieve_food_nutrients):
         self.food_retriever = food_retriever
@@ -91,7 +102,7 @@ class MealPipeline:
         @tool
         async def extract_meal_items(text: str) -> dict:
             """提取已摄入的食物、原文份量，保留明确重量供后续营养估算。"""
-            parsed=Extraction.model_validate(await self.extraction_chain.ainvoke({'text':text}))
+            parsed=await validated_output(self.extraction_chain, {'text':text}, Extraction)
             result=[]
             for index,item in enumerate(parsed.items):
                 if item.raw_text not in text:
@@ -112,7 +123,7 @@ class MealPipeline:
                 {key: row[key] for key in ('id', 'name', 'description', 'state', 'method', 'per100g') if key in row}
                 for row in evidence.get('candidates', [])[:4]
             ] if not evidence['selected'] else []
-        result=Analysis.model_validate(await self.analysis_chain.ainvoke({'payload':json.dumps(extracted,ensure_ascii=False)}))
+        result=await validated_output(self.analysis_chain, {'payload':json.dumps(extracted,ensure_ascii=False)}, Analysis)
         source=extracted['items']
         if sorted(item.item_index for item in result.items)!=list(range(len(source))):
             raise ValueError('分析遗漏或重复食物')
@@ -149,4 +160,4 @@ class MealPipeline:
 @lru_cache(maxsize=1)
 def get_meal_pipeline():
     # Several foods plus assumptions need more output than a one-action parser.
-    return MealPipeline(get_model(max_tokens=4096))
+    return MealPipeline(get_model(max_tokens=4096, timeout=60))

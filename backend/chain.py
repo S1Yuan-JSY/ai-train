@@ -39,7 +39,7 @@ def personal_model(config, max_tokens=4096, timeout=25):
 
 
 @lru_cache(maxsize=4)
-def get_model(max_tokens=4096):
+def get_model(max_tokens=4096, timeout=25):
     key = os.getenv('DEEPSEEK_API_KEY', '').strip()
     if not key or key.startswith('replace_'):
         raise ModelConfigurationError('尚未配置 DeepSeek API Key：请在 backend/.env 的 DEEPSEEK_API_KEY 中填写有效密钥，然后重启服务。APP_ACCESS_TOKEN 仅用于旧数据访问，不能代替模型密钥。')
@@ -47,7 +47,7 @@ def get_model(max_tokens=4096):
         model=os.getenv('DEEPSEEK_MODEL', 'deepseek-flash'),
         api_key=key,
         api_base=os.getenv('DEEPSEEK_BASE_URL', 'https://api.deepseek.com'),
-        temperature=0, max_tokens=max_tokens, timeout=25, max_retries=0,
+        temperature=0, max_tokens=max_tokens, timeout=timeout, max_retries=0,
     ).bind(response_format={'type': 'json_object'})
     return model
 

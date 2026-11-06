@@ -218,8 +218,8 @@ def create_app(chain=None, access_token=None, database_path=None, meal_pipeline=
     async def analyze_meal(request: ParseRequest, user=Depends(auth)):
         try:
             config = model_accounts.resolve(user['id'])
-            selected = meal_pipeline or (MealPipeline(personal_model(config).bind(response_format={'type':'json_object'})) if config else get_meal_pipeline())
-            action=await asyncio.wait_for(selected.ainvoke(request.text), timeout=55)
+            selected = meal_pipeline or (MealPipeline(personal_model(config, timeout=60).bind(response_format={'type':'json_object'})) if config else get_meal_pipeline())
+            action=await asyncio.wait_for(selected.ainvoke(request.text), timeout=180)
             return {'action':action}
         except Exception as exc:
             status, message = meal_error(exc)
